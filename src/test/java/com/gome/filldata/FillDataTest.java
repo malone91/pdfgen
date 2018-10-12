@@ -42,6 +42,8 @@ public final class FillDataTest {
         context.put("companyName", "公司名称");
         context.put("userCode", "1110000111555555");
         context.put("projectCode", "159848787861513");
+        context.put("left-head", "左页眉");
+        context.put("right-head", "右页眉");
         StringWriter stringWriter = new StringWriter();
         velocityEngine.mergeTemplate(vm, "UTF-8", context, stringWriter);
         try {
