@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"/>
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <title>挂牌申请书</title>
+ <style>
+  @page {
+   size: 8.5in 11in;
+      /* 设置页眉 */
+      @top-left {
+          content: '代销净价合同';
+      }
+      @top-right {
+          content: '国美电器';
+      }
+      /* 设置页脚 */
+   @bottom-center {
+    content: counter(page);
+   }
+  }
+  *{margin:0;padding:0;}
+  body{font-family:'SimSun';font-size:10.5pt;}/*宋五*/
+  li{list-style:none;}
+  h1{font-size:15.75pt;}/*黑三*/
+  h2{font-size:12pt;}/*宋小四*/
+  p{line-height:2;}
+  .pull-right{float:right;}
+  .pull-left{float:left;}
+  .clearfix:after{clear:both;content:'';display:block;}
+  .text-center{text-align:center;}
+  .text-right{text-align:right;}
+  .text-indent{text-indent:2em;}
+  .page-mark{page-break-after:always;}
+  .table{border-collapse:collapse; margin:0 auto; width:520pt;width:100%;table-layout:fixed;}
+  .table td{border:0.75pt solid #000;padding:0 5.03pt;font-weight:normal;line-height:20.8pt;word-break: break-word;}
+  .table th{background-color:#fff;line-height:20.8pt;}
+  td.bor,span.bor{border-bottom:1px solid #000;padding:0 10px;}
+  .seal-leaguer{position:absolute;right:50px;top:-45px;}
+  .apply-type li{width:50%;}
+  .apply-type span{display:inline-block;width:14px;height:14px;vertical-align:text-bottom;background:url(/data/App/jgoms.cfaoe.local/purple.png) no-repeat;margin-right:5px;}
+  .apply-type .checked span{background-position:0 -14px;}
+ </style>
+
+</head>
+<body>
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor"><p>$!{companyName}</p>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!userCode</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!projectCode</td>
+  </tr>
+  </tbody>
+ </table>
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+<div style="padding:20px;" class="clearfix">
+ <h1 class="text-center">合同单子</h1><br /><br />
+ <table style="width:100%;table-layout:fixed;">
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <col style="width:15%" />
+  <col style="width:15%" />
+  <col style="width:20%" />
+  <tbody>
+  <tr>
+   <td colspan="2">申请机构（主承销商）：</td>
+   <td align="center" colspan="4" class="bor">$!{companyName}</td>
+  </tr>
+  <tr>
+   <td colspan="6"><br/></td>
+  </tr>
+  <tr>
+   <td>会员编号：</td>
+   <td align="center" colspan="2" class="bor">$!{userCode}</td>
+   <td>申请书编号：</td>
+   <td align="center" colspan="2" class="bor">$!{projectCode}</td>
+  </tr>
+  </tbody>
+ </table>
+
+
+</div>
+
+</body>
+</html>
