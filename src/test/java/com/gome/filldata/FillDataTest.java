@@ -42,12 +42,14 @@ public final class FillDataTest {
         context.put("companyName", "公司名称");
         context.put("userCode", "1110000111555555");
         context.put("projectCode", "159848787861513");
-        context.put("left-head", "左页眉");
-        context.put("right-head", "右页眉");
+        //页眉 页脚
+        context.put("left-head", "代销净价合同");
+        context.put("right-head", "国美零售");
         StringWriter stringWriter = new StringWriter();
         velocityEngine.mergeTemplate(vm, "UTF-8", context, stringWriter);
         try {
             PdfUtil.html2Pdf(stringWriter.toString(), destFilePath);
+            //添加水印
             WaterMarkUtil.waterMark("E:/templatePdf.pdf", "E:/templatePdfWater.pdf", "国美集团");
         } catch (Exception e) {
             e.printStackTrace();

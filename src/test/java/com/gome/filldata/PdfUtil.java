@@ -1,6 +1,7 @@
 package com.gome.filldata;
 
 import com.itextpdf.kernel.pdf.PdfName;
+import com.itextpdf.text.pdf.BaseFont;
 import org.apache.commons.io.FileUtils;
 import org.xhtmlrenderer.pdf.ITextFontResolver;
 import org.xhtmlrenderer.pdf.ITextRenderer;
@@ -10,6 +11,7 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 
 /**
+ * 需要更换core-render的jar包
  * Created by malong-ds on 2018/10/11.
  */
 public final class PdfUtil {
@@ -42,10 +44,10 @@ public final class PdfUtil {
             agreementBody = agreementBody.replace("&rsaquo;", "›"); // single right angle quotation
             agreementBody = agreementBody.replace("&oline;", "‾"); // overline
 
-            fontResolver.addFont("simsun.ttc", PdfName.IdentityH.getValue(), false);
             textRenderer.setDocumentFromString(agreementBody);
+            fontResolver.addFont("simsun.ttc", PdfName.IdentityH.getValue(), BaseFont.NOT_EMBEDDED);
             textRenderer.layout();
-            textRenderer.createPDF(fileStream, true);
+            textRenderer.createPDF(fileStream);
         }
     }
 
