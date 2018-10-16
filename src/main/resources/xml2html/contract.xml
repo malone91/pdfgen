@@ -17,22 +17,38 @@
         <second-corporate>yi</second-corporate>
     </info>
     <itemlist>
-        <item>
-            <type>heading</type>
-            <key-class>level0</key-class>
-            <key>原则条款</key>
-            <value-class></value-class>
-            <value>
-            </value>
-        </item>
-        <item>
-            <type>content</type>
-            <key-class>level1</key-class>
-            <key>第一条</key>
-            <value-class>level2</value-class>
-            <value>
-                本合同书经甲乙双方通过友好协商，本着优势互补、互惠互利、共同发展的原则，依据《中华人民共和国合同法》、《中华人民共和国产品质量法》、《中华人民共和国消费者权益保护法》、《零售商供应商公平交易管理办法》等法律、法规的规定签订。
-            </value>
-        </item>
+        <segment>
+            <title>原则条款</title>
+            <clause>
+                <item>
+                    <index>第一条</index>
+                    <content>
+                        本合同书经甲乙双方通过友好协商，本着优势互补、互惠互利、共同发展的原则，依据《中华人民共和国合同法》、《中华人民共和国产品质量法》、《中华人民共和国消费者权益保护法》、《零售商供应商公平交易管理办法》等法律、法规的规定签订。
+                    </content>
+                </item>
+            </clause>
+        </segment>
+        <segment>
+            <title>通用条款</title>
+            <clause>
+                <item>
+                    <index>第二条</index>
+                    <content>
+                        本合同书经甲乙双方通过友好协商，本着优势互补、互惠互利、共同发展的原则，依据《中华人民共和国合同法》、《中华人民共和国产品质量法》、《中华人民共和国消费者权益保护法》、《零售商供应商公平交易管理办法》等法律、法规的规定签订。
+                    </content>
+                </item>
+            </clause>
+        </segment>
+        <segment>
+            <title>通用净价</title>
+            <clause>
+                <item>
+                    <index>第三条</index>
+                    <content>
+                        供货价格：指甲方按照合同约定履行了供方应尽的各项基本义务的前提下向乙方提供商品的实际价格，该价格应低于甲方给予其他所有供货渠道的商品价格。甲方应尽的基本义务包括但不限于负责将商品运输至乙方指定地点（装卸均由甲方负责）、按约定负责库存商品的处理、按约定保证提供商品销售的账面毛利率等。甲方同意，如因甲方单方原因无法履行上述义务或履行不符合约定的，甲方同意按下述方式之一处理：（1）按照主合同约定或通过签订补充协议的方式约定由乙方为甲方提供上述服务，甲方支付相应的服务费用；或（2）甲方承担相应的违约责任，按约定向乙方支付损失赔偿金或违约金。
+                    </content>
+                </item>
+            </clause>
+        </segment>
     </itemlist>
 </document>

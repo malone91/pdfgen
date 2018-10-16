@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:output method="html" encoding="UTF-8"/>
+<xsl:output method="xml" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
 <xsl:template match="/">
 
 <html>
 <head>
-<title>员工信息</title>
     <style type="text/css">
         @page {
         font-family: SimSun;
@@ -134,35 +133,29 @@
 
             <!-- 合同条款 -->
             <table>
-                <xsl:for-each select="document/itemlist/item">
-                    <!-- 内容小标题 -->
-                    <xsl:if test="type = 'heading'">
+                <xsl:for-each select="document/itemlist/segment">
+                    <!-- 合同条款 -->
                         <tr>
                             <td>
-                                <div>
-                                    <xsl:attribute name="class"><xsl:value-of select="key-class"/></xsl:attribute>
-                                    <xsl:value-of select="key"/>
+                                <div class="level0">
+                                    <xsl:value-of select="title"/>
                                 </div>
                             </td>
                         </tr>
-                    </xsl:if>
-                    <!-- 合同内容 -->
-                    <xsl:if test="type = 'content'">
-                     <tr>
-                        <td>
-                            <div>
-                                <xsl:attribute name="class"><xsl:value-of select="key-class"/></xsl:attribute>
-                                <xsl:value-of select="key"/>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <xsl:attribute name="class"><xsl:value-of select="value-class"/></xsl:attribute>
-                                <xsl:value-of select="value"/>
-                            </div>
-                        </td>
-                    </tr>
-                    </xsl:if>
+                    <xsl:for-each select="clause/item">
+                        <tr>
+                            <td>
+                                <div class="level1">
+                                    <xsl:value-of select="index"/>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="level2">
+                                    <xsl:value-of select="content"/>
+                                </div>
+                            </td>
+                        </tr>
+                    </xsl:for-each>
                 </xsl:for-each>
             </table>
     </body>
