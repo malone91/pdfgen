@@ -89,26 +89,24 @@
 <div class="left-header">$!{left-head}</div>
 <div class="right-header">$!{right-head}</div>
 
- <h1 class="text-center">代销（净价）合同书</h1><br />
-<h4 class="text-right">合同编号</h4><br /><br />
+<h1 class="text-center">代销（净价）合同书</h1><br />
 
 <div style="padding:20px;" class="clearfix">
  <table style="width:100%;table-layout:fixed;">
-  <col style="width:15%" />
-  <col style="width:15%" />
-  <col style="width:20%" />
-  <col style="width:15%" />
-  <col style="width:15%" />
-  <col style="width:20%" />
   <tbody>
   <tr>
-   <td colspan="2">甲方（主承销商）：</td>
-   <td align="center" colspan="2" class="bor"><p>$!{companyName}</p>
+   <td colspan="4" align="right"><h4>合同编号：</h4></td>
+   <td align="center" colspan="2" class="bor">$!{contract_id}
    </td>
   </tr>
   <tr>
-   <td colspan="2">注册地址：</td>
-   <td align="center" colspan="2" class="bor"><p>$!{companyName}</p></td>
+   <td>甲方（主承销商）：</td>
+   <td align="center" colspan="2" class="bor">$!{companyName}
+   </td>
+  </tr>
+  <tr>
+   <td>注册地址：</td>
+   <td align="center" colspan="2" class="bor">$!{companyName}</td>
   </tr>
   <tr>
    <td>法定代表人：</td>
@@ -116,13 +114,13 @@
   </tr>
 
   <tr>
-   <td colspan="2">乙方（需方）：</td>
+   <td>乙方（需方）：</td>
    <td align="center" colspan="2" class="bor"><p>$!{companyName}</p>
    </td>
   </tr>
   <tr>
-   <td colspan="2">注册地址：</td>
-   <td align="center" colspan="4" class="bor"><p>$!{companyName}</p></td>
+   <td>注册地址：</td>
+   <td align="center" colspan="2" class="bor">$!{companyName}</td>
   </tr>
   <tr>
    <td>法定代表人：</td>
@@ -133,9 +131,11 @@
 </div>
 
 <table>
- <tr><td>
-   <div class="level0">原则条款</div>
- </td></tr>
+ <tr>
+   <td>
+    <div class="level0">原则条款</div>
+   </td>
+ </tr>
 
  <tr>
   <td>
@@ -189,6 +189,13 @@
    </div>
   </td>
  </tr>
+
+ <tr>
+  <td>
+   <div class="level0">价格管理</div>
+  </td>
+ </tr>
+
  <tr>
   <td>
     <div class="level1">第5条</div>
@@ -240,6 +247,20 @@
    甲方授权乙方作为其生产或经销的商品的代销商；乙方同意有选择地销售甲方提供的适销对路的商品。由甲方提供商品，乙方负责营造有益于销售的氛围，为甲方提供有益于销售商品的平台；甲方负责提供适销对路，且质优价廉的商品，并适时给予促销资源的保障。
    </div>
   </td>
+ </tr>
+
+ <!-- 最后落款 -->
+
+ <tr>
+  <td><div>甲方（盖章）：</div></td>
+ </tr>
+ <tr>
+  <td colspan="2">注册地址：</td>
+  <td colspan="1" class="bor"></td>
+ </tr>
+ <tr>
+  <td colspan="2">法定代表人：</td>
+  <td colspan="1" class="bor"></td>
  </tr>
 </table>
 
