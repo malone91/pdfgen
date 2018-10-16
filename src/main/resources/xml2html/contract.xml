@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <!-- 页眉标题 -->
+    <left-head>左页眉</left-head>
+    <right-head>右页眉</right-head>
+    <title>
+        合同书标题
+    </title>
+    <contract-no>20181016</contract-no>
+    <info>
+        <first-party>甲方</first-party>
+        <first-address>北京</first-address>
+        <first-corporate>jia</first-corporate>
+
+        <second-party>乙方</second-party>
+        <second-address>上海</second-address>
+        <second-corporate>yi</second-corporate>
+    </info>
+    <itemlist>
+        <item>
+            <type>heading</type>
+            <key-class>level0</key-class>
+            <key>原则条款</key>
+            <value-class></value-class>
+            <value>
+            </value>
+        </item>
+        <item>
+            <type>content</type>
+            <key-class>level1</key-class>
+            <key>第一条</key>
+            <value-class>level2</value-class>
+            <value>
+                本合同书经甲乙双方通过友好协商，本着优势互补、互惠互利、共同发展的原则，依据《中华人民共和国合同法》、《中华人民共和国产品质量法》、《中华人民共和国消费者权益保护法》、《零售商供应商公平交易管理办法》等法律、法规的规定签订。
+            </value>
+        </item>
+    </itemlist>
+</document>
