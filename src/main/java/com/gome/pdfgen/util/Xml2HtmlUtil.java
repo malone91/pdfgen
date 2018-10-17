@@ -6,7 +6,7 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 
 /**
- *
+ * XML依赖XML转为HTML文件，页眉页脚由工具类进行控制
  * @author malong-ds
  * @date 2018/10/16
  */
@@ -15,15 +15,15 @@ public final class Xml2HtmlUtil {
     /**
      * xml转html  for linux os
      */
-    public void transferXml2Html(String target) {
+    public static void transferXml2Html(String xmlPath, String xslPath, String target) {
         InputStream inputStream = null;
         InputStream stream = null;
         //创建xml文件输入流
         try {
-            inputStream = this.getClass().getClassLoader().getResourceAsStream("xml2html/contract.xml");
+            inputStream = Xml2HtmlUtil.class.getClassLoader().getResourceAsStream(xmlPath);
             Source source = new StreamSource(inputStream);
             //创建xsl输入流
-            stream = this.getClass().getClassLoader().getResourceAsStream("xml2html/contract.xsl");
+            stream = Xml2HtmlUtil.class.getClassLoader().getResourceAsStream(xslPath);
             Source template = new StreamSource(stream);
 
             PrintStream stm = new PrintStream(new File(target));

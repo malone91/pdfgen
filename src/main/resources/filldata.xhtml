@@ -10,17 +10,28 @@
    /* it is just A4 size */
    size: 8.5in 11in;
    /* 设置页眉 */
-   @top-left {
-    content: element(left-header);
-   }
-   @top-right {
-    content: element(right-header);
-   }
-   /* 设置页脚 */
-   @bottom-center {
-    content: counter(page);
-   }
+   border-top: 1px solid black;
+   /*@top-left {*/
+    /*content: element(left-header);*/
+   /*}*/
+   /*@top-right {*/
+    /*content: element(right-header);*/
+   /*}*/
+   /*!* 设置页脚 *!*/
+   /*@bottom-center {*/
+    /*content: counter(page);*/
+   /*}*/
   }
+
+  div.right-header {
+   display: block;
+   position: running(right-header);
+  }
+  div.left-header {
+   display: block;
+   position: running(left-header);
+  }
+
   *{margin:0;padding:0;}
   body {
    font-family:'SimSun';font-size:10.5pt;
@@ -37,18 +48,6 @@
   .apply-type li{width:50%;}
   .apply-type span{display:inline-block;width:14px;height:14px;vertical-align:text-bottom;background:url(/data/App/jgoms.cfaoe.local/purple.png) no-repeat;margin-right:5px;}
   .apply-type .checked span{background-position:0 -14px;}
-
-  div.right-header {
-   display: block;
-   position: running(right-header);
-   border-bottom: 1px solid black;
-  }
-  div.left-header {
-   display: block;
-   position: running(left-header);
-   border-bottom: 1px solid black;
-
-  }
 
   .level0 {
    margin-left: 0.5cm;
@@ -89,6 +88,9 @@
    <td align="center" colspan="2" class="bor">$!{contract_id}
    </td>
   </tr>
+
+  <tr><td><br></br></td></tr>
+
   <tr>
    <td style="width: 100px;">甲方（主承销商）：</td>
    <td align="center" colspan="4" class="bor">$!{companyName}
@@ -116,6 +118,8 @@
    <td style="width: 100px;">法定代表人：</td>
    <td align="center" colspan="4" class="bor">$!userCode</td>
   </tr>
+  <tr><td><br></br></td></tr>
+  <tr><td><br></br></td></tr>
   </tbody>
  </table>
 </div>
@@ -239,24 +243,51 @@
   </td>
  </tr>
 
- <!-- 最后落款 -->
-
- <tr>
-  <td style="width:100px;"><div>甲方（盖章）：</div></td>
-  <td><div style="width: 200px;"></div></td>
-  <td style="width:100px;"><div>甲方（盖章）：</div></td>
-  <td colspan="2"></td>
- </tr>
- <tr>
-  <td style="width:100px;"><div>注册地址：</div></td>
-  <td colspan="2"></td>
- </tr>
- <tr>
-  <td style="width:100px;"><div>法定代表人：</div></td>
-  <td colspan="2"></td>
- </tr>
 </table>
 
+<!-- 合同最后落款，时间，签字人等 -->
+<div class="clearfix">
+ <table style="width:100%;table-layout:fixed;">
+  <tbody>
+  <tr>
+   <td style="width: 230px;">甲方（盖章）：</td>
+   <td colspan="3">
+   </td>
+   <td style="width: 230px;">乙方（盖章）：</td>
+   <td colspan="3"></td>
+  </tr>
+
+  <tr><td><br/></td></tr>
+  <tr><td><br/></td></tr>
+  <tr><td><br/></td></tr>
+  <tr><td><br/></td></tr>
+
+  <tr>
+   <td style="width: 230px;">法定代表人或授权代表（签字）：</td>
+   <td colspan="3"></td>
+   <td style="width: 230px;">法定代表人或授权代表（签字）：</td>
+   <td colspan="3"></td>
+  </tr>
+  </tbody>
+ </table>
+
+ <table>
+  <tr>
+   <td style="width:10%"></td><td>年</td>
+   <td style="width:5%"></td><td>月</td>
+   <td style="width:5%"></td><td>日</td>
+
+   <td style="width:30%"></td>
+
+   <td style="width:10%"></td><td>年</td>
+   <td style="width:5%"></td><td>月</td>
+   <td style="width:5%"></td><td>日</td>
+
+   <td style="width:30%"></td>
+  </tr>
+ </table>
+
+</div>
 
 </body>
 </html>

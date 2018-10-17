@@ -1,5 +1,7 @@
 package com.gome.html2pdf;
 
+import com.gome.util.PdfUtil;
+import com.gome.util.WaterMarkUtil;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.junit.Test;
@@ -28,7 +30,7 @@ public final class FillDataTest {
         properties.setProperty("class.resource.loader.class", "org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
         //实例化一个VelocityEngine对象
         VelocityEngine velocityEngine = new VelocityEngine(properties);
-        String vm = "filldata.xhtml";
+        String vm = "contract.html";
 
         //设置生成pdf文件所在的文件夹位置，若没有，则自动生成
         File destPathFile = new File("E:/");
@@ -44,8 +46,8 @@ public final class FillDataTest {
         context.put("userCode", "1110000111555555");
         context.put("projectCode", "159848787861513");
         //页眉 页脚
-        context.put("left-head", "代销净价合同");
-        context.put("right-head", "国美零售");
+        context.put("left-head", "代销净h价合同");
+        context.put("right-head", "abc");
         StringWriter stringWriter = new StringWriter();
         velocityEngine.mergeTemplate(vm, "UTF-8", context, stringWriter);
         try {

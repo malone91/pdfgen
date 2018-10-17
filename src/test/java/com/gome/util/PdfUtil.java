@@ -1,4 +1,4 @@
-package com.gome.pdfgen.util;
+package com.gome.util;
 
 import com.itextpdf.kernel.pdf.PdfName;
 import com.itextpdf.text.pdf.BaseFont;
@@ -14,7 +14,7 @@ import java.io.OutputStream;
  * 需要更换core-render的jar包
  * Created by malong-ds on 2018/10/11.
  */
-public final class PdfGenUtil {
+public final class PdfUtil {
 
     /**
      * html转为pdf
@@ -27,7 +27,6 @@ public final class PdfGenUtil {
         try (OutputStream fileStream = new FileOutputStream(filePath)) {
             ITextRenderer textRenderer = new ITextRenderer();
             ITextFontResolver fontResolver = textRenderer.getFontResolver();
-
             textRenderer.setDocumentFromString(htmlContent);
             fontResolver.addFont("simsun.ttc", PdfName.IdentityH.getValue(), BaseFont.NOT_EMBEDDED);
             textRenderer.layout();

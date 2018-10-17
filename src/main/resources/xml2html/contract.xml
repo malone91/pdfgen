@@ -16,6 +16,7 @@
         <second-address>上海</second-address>
         <second-corporate>yi</second-corporate>
     </info>
+    <!-- 条款 -->
     <itemlist>
         <segment>
             <title>原则条款</title>
@@ -51,4 +52,17 @@
             </clause>
         </segment>
     </itemlist>
+    <!-- 最后落款 -->
+    <signature>
+        <first-signature>甲方</first-signature>
+        <second-signature>乙方</second-signature>
+
+        <first-year>2018</first-year>
+        <first-month>10</first-month>
+        <first-day>10</first-day>
+
+        <second-year>2018</second-year>
+        <second-month>10</second-month>
+        <second-day>10</second-day>
+    </signature>
 </document>

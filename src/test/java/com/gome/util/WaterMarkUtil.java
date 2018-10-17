@@ -1,4 +1,4 @@
-package com.gome.html2pdf;
+package com.gome.util;
 
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Rectangle;
@@ -53,7 +53,6 @@ public final class WaterMarkUtil {
                 under.setFontAndSize(base, 20);
 
                 // 水印文字成30度角倾斜
-                //你可以随心所欲的改你自己想要的角度
                 for (int height = interval + textH; height < pageRect.getHeight();
                      height = height + textH*3) {
                     for (int width = interval + textW; width < pageRect.getWidth() + textW;
@@ -66,10 +65,6 @@ public final class WaterMarkUtil {
                 // 添加水印文字
                 under.endText();
             }
-            //说三遍
-            //一定不要忘记关闭流
-            //一定不要忘记关闭流
-            //一定不要忘记关闭流
             stamper.close();
             reader.close();
         } catch (Exception e) {

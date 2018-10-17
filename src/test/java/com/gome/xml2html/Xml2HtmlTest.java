@@ -27,7 +27,7 @@ public class Xml2HtmlTest {
             PrintStream stm = new PrintStream(new File("E:/contract.html"));
             //输出到html
             //讲转换后的结果输出到 stm 中即 F:\123.html
-            Result result=new StreamResult(stm);
+            Result result = new StreamResult(stm);
             //根据XSL文件创建准个转换对象
             Transformer transformer= TransformerFactory.newInstance().newTransformer(template);
             //处理xml进行交换

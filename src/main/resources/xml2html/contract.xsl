@@ -10,17 +10,19 @@
         font-family: SimSun;
         /* it is just A4 size */
         size: 8.5in 11in;
+        <!-- 设置顶线 -->
+        border-top: 1px solid black;
         /* 设置页眉 */
-        @top-left {
-        content: element(left-header);
-        }
-        @top-right {
-        content: element(right-header);
-        }
-        /* 设置页脚 */
-        @bottom-center {
-        content: counter(page);
-        }
+        <!--@top-left {-->
+        <!--content: element(left-header);-->
+        <!--}-->
+        <!--@top-right {-->
+        <!--content: element(right-header);-->
+        <!--}-->
+        <!--/* 设置页脚 */-->
+        <!--@bottom-center {-->
+        <!--content: counter(page);-->
+        <!--}-->
         }
         *{margin:0;padding:0;}
         body {
@@ -89,44 +91,51 @@
                             <xsl:value-of select="document/contract-no"></xsl:value-of>
                         </td>
                     </tr>
+
+                    <tr><td><br></br></td></tr>
+                    <tr><td><br></br></td></tr>
+
                     <tr>
-                        <td>甲方（主承销商）：</td>
-                        <td align="center" colspan="2" class="bor">
+                        <td style="width: 100px;">甲方（承销商）：</td>
+                        <td align="center" colspan="4" class="bor">
                             <xsl:value-of select="document/info/first-party"></xsl:value-of>
                         </td>
                     </tr>
                     <tr>
-                        <td>注册地址：</td>
-                        <td align="center" colspan="2" class="bor">
+                        <td style="width: 100px;">注册地址：</td>
+                        <td align="center" colspan="4" class="bor">
                             <xsl:value-of select="document/document/info/first-address"></xsl:value-of>
                         </td>
                     </tr>
                     <tr>
-                        <td>法定代表人：</td>
-                        <td align="center" colspan="2" class="bor">
+                        <td style="width: 100px;">法定代表人：</td>
+                        <td align="center" colspan="4" class="bor">
                             <xsl:value-of select="document/info/first-corporate"></xsl:value-of>
                         </td>
                     </tr>
 
                     <tr>
-                        <td>乙方（需方）：</td>
-                        <td align="center" colspan="2" class="bor"><p>
+                        <td style="width: 100px;">乙方（需方）：</td>
+                        <td align="center" colspan="4" class="bor"><p>
                             <xsl:value-of select="document/info/second-party"></xsl:value-of>
                         </p>
                         </td>
                     </tr>
                     <tr>
-                        <td>注册地址：</td>
-                        <td align="center" colspan="2" class="bor">
+                        <td style="width: 100px;">注册地址：</td>
+                        <td align="center" colspan="4" class="bor">
                             <xsl:value-of select="document/info/second-address"></xsl:value-of>
                         </td>
                     </tr>
                     <tr>
-                        <td>法定代表人：</td>
-                        <td align="center" colspan="2" class="bor">
+                        <td style="width: 100px;">法定代表人：</td>
+                        <td align="center" colspan="4" class="bor">
                             <xsl:value-of select="document/info/second-corporate"></xsl:value-of>
                         </td>
                     </tr>
+
+                    <tr><td><br></br></td></tr>
+                    <tr><td><br></br></td></tr>
                 </tbody>
             </table>
         </div>
@@ -158,6 +167,52 @@
                     </xsl:for-each>
                 </xsl:for-each>
             </table>
+
+        <!-- 合同落款，比如时间，签字人 -->
+        <div class="clearfix">
+            <table style="width:100%;table-layout:fixed;">
+                <tbody>
+                    <tr><td><br></br></td></tr>
+                    <tr>
+                        <td style="width: 230px;">甲方（盖章）：</td>
+                        <td colspan="3">
+                        </td>
+                        <td style="width: 230px;">乙方（盖章）：</td>
+                        <td colspan="3"></td>
+                    </tr>
+
+                    <!-- 换行 -->
+                    <tr><td><br></br></td></tr>
+                    <tr><td><br></br></td></tr>
+                    <tr><td><br></br></td></tr>
+                    <tr><td><br></br></td></tr>
+
+                    <tr>
+                        <td style="width: 230px;">法定代表人或授权代表（签字）：</td>
+                        <td colspan="3"><xsl:value-of select="document/signature/first-signature"/></td>
+                        <td style="width: 230px;">法定代表人或授权代表（签字）：</td>
+                        <td colspan="3"><xsl:value-of select="document/signature/second-signature"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 日期单独一个table表示 -->
+            <table>
+                <tr>
+                    <td style="width:10%"><xsl:value-of select="document/signature/first-year"/></td><td>年</td>
+                    <td style="width:5%"><xsl:value-of select="document/signature/first-month"/></td><td>月</td>
+                    <td style="width:5%"><xsl:value-of select="document/signature/first-day"/></td><td>日</td>
+
+                    <td style="width:30%"></td>
+
+                    <td style="width:10%"><xsl:value-of select="document/signature/second-year"/></td><td>年</td>
+                    <td style="width:5%"><xsl:value-of select="document/signature/second-month"/></td><td>月</td>
+                    <td style="width:5%"><xsl:value-of select="document/signature/second-day"/></td><td>日</td>
+
+                    <td style="width:30%"></td>
+                </tr>
+            </table>
+
+        </div>
     </body>
 </html>
 </xsl:template>
