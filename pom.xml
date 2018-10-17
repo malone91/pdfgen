@@ -57,6 +57,18 @@
             <!--<version>9.1.5</version>-->
         </dependency>
 
+        <!-- 合并pdf -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.12</version>
+        </dependency>
+
         <!-- html2pdf -->
         <dependency>
             <groupId>org.xhtmlrenderer</groupId>
