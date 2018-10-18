@@ -16,15 +16,15 @@ public class PdfMergeUtil {
     /**
      *
      * @param files
-     * @param newfile
+     * @param targetPath
      * @return
      */
-    public static boolean mergePdfFiles(String[] files, String newfile) {
+    public static boolean mergePdfFiles(String[] files, String targetPath) {
         boolean retValue = false;
         Document document = null;
         try {
             document = new Document(new PdfReader(files[0]).getPageSize(1));
-            FileOutputStream fileOutputStream = new FileOutputStream(newfile);
+            FileOutputStream fileOutputStream = new FileOutputStream(targetPath);
             PdfCopy copy = new PdfCopy(document, fileOutputStream);
             document.open();
             for (int i = 0; i < files.length; i++) {
@@ -40,12 +40,9 @@ public class PdfMergeUtil {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            document.close();
-        }
-        try {
-            PdfHeaderFooterUtil.setPageHeaderAndFooter(newfile, "E:/page.pdf");
-        } catch (Exception e) {
-            e.printStackTrace();
+            if (document != null) {
+                document.close();
+            }
         }
         return retValue;
     }

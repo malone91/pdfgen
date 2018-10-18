@@ -1,6 +1,7 @@
 package com.gome.pdfgen.controller;
 
 import com.gome.pdfgen.util.Html2PdfUtil;
+import com.gome.pdfgen.util.PdfHeaderFooterUtil;
 import com.gome.pdfgen.util.PdfMergeUtil;
 import com.gome.pdfgen.util.Xml2HtmlUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -57,8 +58,14 @@ public class HelloController {
     @RequestMapping(value = "/mergePdf", method = RequestMethod.GET)
     public String mergePdf() {
         String[] files = { "e:\\1.pdf", "e:\\2.pdf","e:\\3.pdf", "e:\\4.pdf" };
-        String savepath = "e:\\temp.pdf";
-        PdfMergeUtil.mergePdfFiles(files, savepath);
+        String targetPath = "e:\\temp.pdf";
+        PdfMergeUtil.mergePdfFiles(files, targetPath);
+        //单独给合并的文件添加页眉 页脚
+        try {
+            PdfHeaderFooterUtil.setPageHeaderAndFooter(targetPath, "E:/page.pdf");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "hello world";
     }
 }
