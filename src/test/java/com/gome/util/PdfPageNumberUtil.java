@@ -27,9 +27,9 @@ public class PdfPageNumberUtil {
             content.beginText();
             content.setFontAndSize(base, 12);
             content.setTextMatrix(200, 200);
-            content.showTextAligned(Element.ALIGN_TOP,"左页眉",25,770,0);//左边距、下边距
-            content.showTextAligned(Element.ALIGN_TOP,"右页眉",425,770,0);//左边距、下边距
-            content.showTextAligned(Element.CCITT_ENDOFBLOCK,"第   " + i + "  页\t共   " + totalPage + "页",420,20,0);//左边距、下边距
+            content.showTextAligned(Element.ALIGN_TOP,"左页眉",35,760,0);//左边距、下边距
+            content.showTextAligned(Element.ALIGN_TOP,"右页眉",535,760,0);//左边距、下边距
+            content.showTextAligned(Element.CCITT_ENDOFBLOCK,"第   " + i + "  页\t共   " + totalPage + "页",300,20,0);//左边距、下边距
             content.endText();
         }
         pdfStamper.close();

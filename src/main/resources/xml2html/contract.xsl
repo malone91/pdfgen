@@ -13,16 +13,16 @@
         <!-- 设置顶线 -->
         border-top: 1px solid black;
         /* 设置页眉 */
-        <!--@top-left {-->
-        <!--content: element(left-header);-->
-        <!--}-->
-        <!--@top-right {-->
-        <!--content: element(right-header);-->
-        <!--}-->
-        <!--/* 设置页脚 */-->
-        <!--@bottom-center {-->
-        <!--content: counter(page);-->
-        <!--}-->
+        @top-left {
+        content: element(left-header);
+        }
+        @top-right {
+        content: element(right-header);
+        }
+        /* 设置页脚 */
+        @bottom-center {
+        content: counter(page) "/" counter(pages);
+        }
         }
         *{margin:0;padding:0;}
         body {
@@ -41,15 +41,19 @@
         .apply-type span{display:inline-block;width:14px;height:14px;vertical-align:text-bottom;background:url(/data/App/jgoms.cfaoe.local/purple.png) no-repeat;margin-right:5px;}
         .apply-type .checked span{background-position:0 -14px;}
 
-        div.right-header {
-        display: block;
-        position: running(right-header);
-        border-bottom: 1px solid black;
-        }
         div.left-header {
-        display: block;
-        position: running(left-header);
-        border-bottom: 1px solid black;
+            width:360px;
+            display: block;
+            position: running(left-header);
+            border-bottom: 1px solid black;
+            height: 20px;
+        }
+        div.right-header {
+            width: 360px;
+            display: block;
+            position: running(right-header);
+            border-bottom: 1px solid black;
+            height: 20px;
         }
 
         .level0 {
@@ -77,8 +81,8 @@
 </head>
     <body>
         <!-- 页眉设置 -->
-        <div class="left-header"><xsl:value-of select="document/left-head"></xsl:value-of></div>
-        <div class="right-header"><xsl:value-of select="document/left-head"></xsl:value-of></div>
+        <div class="left-header"><p style="margin:-3px 0px;"><xsl:value-of select="document/left-head"></xsl:value-of></p></div>
+        <div class="right-header"><p style=""><xsl:value-of select="document/left-head"></xsl:value-of></p></div>
         <!-- 合同标题 -->
         <h1 class="text-center"><xsl:value-of select="document/title"></xsl:value-of></h1>
         <!-- 合同信息 -->

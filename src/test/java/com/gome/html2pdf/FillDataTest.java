@@ -2,6 +2,7 @@ package com.gome.html2pdf;
 
 import com.gome.util.PdfUtil;
 import com.gome.util.WaterMarkUtil;
+import org.apache.commons.lang.StringUtils;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.junit.Test;
@@ -57,5 +58,9 @@ public final class FillDataTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) {
+
     }
 }
