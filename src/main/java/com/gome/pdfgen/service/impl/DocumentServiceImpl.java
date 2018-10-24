@@ -25,11 +25,21 @@ public class DocumentServiceImpl implements DocumentService {
 
     @Override
     public void saveDocument(Document document) {
-        mongoTemplate.save(document);
+
     }
 
     @Override
     public List<Document> findAll() {
-        return mongoTemplate.findAll(Document.class);
+        return null;
+    }
+
+    @Override
+    public String createDocument(String templateId) {
+        return null;
+    }
+
+    @Override
+    public String fillDocumentFormData(String documentId) {
+        return null;
     }
 }

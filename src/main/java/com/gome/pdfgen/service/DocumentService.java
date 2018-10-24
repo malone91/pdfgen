@@ -19,7 +19,7 @@ public interface DocumentService {
     List<Document> findAll();
 
     /**
-     * 场景1：选择合同模板后点击生成文档，后台业务操作根据模板id生成文档并存入mongo中，并返回生成文档的documentId
+     * 场景1：选择合同模板后点击生成文档，后台业务操作根据模板id生成文档，设置文档的模板id并存入mongo中，并返回生成文档的documentId
      * 存xml
      * @param templateId
      * @return
