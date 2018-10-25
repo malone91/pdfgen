@@ -83,14 +83,14 @@
             <body>
                 <body>
                     <!-- 页眉设置 -->
-                    <div class="left-header"><p style="margin:-3px 0px;font-weight: normal;"><xsl:value-of select="document/header-left"></xsl:value-of></p></div>
-                    <div class="right-header"><p style="margin:-3px 300px;font-weight: normal;"><xsl:value-of select="document/header-right"></xsl:value-of></p></div>
+                    <div class="left-header"><p style="margin:-0.5px 0px;font-weight: normal;font-size: 9pt;"><xsl:value-of select="document/header-left"></xsl:value-of></p></div>
+                    <div class="right-header"><p style="margin:-0.5px 300px;font-weight: normal;font-size: 9pt;"><xsl:value-of select="document/header-right"></xsl:value-of></p></div>
                     <br></br>
                     <br></br>
                     <br></br>
 
                     <!-- 合同标题 -->
-                    <h1 class="text-center"><xsl:value-of select="document/title"></xsl:value-of></h1>
+                    <h1 style="text-align:center; font-size: 16pt;"><xsl:value-of select="document/title"></xsl:value-of></h1>
                     <br></br>
                     <br></br>
                     <h4 style="text-align:right;"><xsl:value-of select="document/contract_id"></xsl:value-of><span style="border-bottom:1px solid #000;padding:0 50px;">$!{<xsl:value-of select="document/contract_id/@id"></xsl:value-of>}</span></h4>
@@ -98,7 +98,7 @@
                     <br></br>
                     <div>
                         <xsl:for-each select="document/parties/party">
-                            <h4><span style="display:inline-block; width:200px"><xsl:value-of select="text()"></xsl:value-of></span><span style="border-bottom:1px solid #000;padding:0 150px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span></h4>
+                            <h4><span style="display:inline-block; width:120px"><xsl:value-of select="text()"></xsl:value-of></span><span style="border-bottom:1px solid #000;padding:0 170px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span></h4>
                             <br></br>
                         </xsl:for-each>
                     </div>
