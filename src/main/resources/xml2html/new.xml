@@ -388,7 +388,7 @@
             <term1>
                 <term1_num>第37条</term1_num>
                 <term1_body>
-                    第37条 为防止甲方场外交易行为的发生，甲方应对所属雇员加强管理和培训，乙方对此予以监督和检查。
+                    为防止甲方场外交易行为的发生，甲方应对所属雇员加强管理和培训，乙方对此予以监督和检查。
                 </term1_body>
             </term1>
         </term0>
@@ -769,13 +769,14 @@
                 <term1_num>第76条</term1_num>
                 <term1_body>
                     本合同于
-                    <list type="number" width="60" id="sign_location"> 。
-                        <options>
-                            <option value="1" selected="selected">北京鹏润大厦</option>
-                        <option value="2">乙方注册地</option>
-                        </options>
-                    </list>
-                    <input>北京鹏润大厦/乙方注册地）签订。</input>
+                    <!--<list type="number" width="60" id="sign_location"> 。-->
+                        <!--<options>-->
+                            <!--<option value="1" selected="selected">北京鹏润大厦</option>-->
+                        <!--<option value="2">乙方注册地</option>-->
+                        <!--</options>-->
+                    <!--</list>-->
+                    <input width="60" id="sign_location"></input>
+                    <input>（北京鹏润大厦/乙方注册地）签订。</input>
                 </term1_body>
             </term1>
         </term0>
@@ -832,5 +833,7 @@
     </terms>
 
     <!-- sign -->
-
+    <sign id_party_a="party_a_name" id_party_b="party_b_name" id_party_a_rep="party_a_legal_contact"
+          id_party_b_rep="party_a_legal_contact" id_party_a_date="party_a_sign_date" id_party_b_date="party_b_sign_date"
+    ></sign>
 </document>

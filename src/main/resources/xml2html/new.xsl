@@ -44,9 +44,9 @@
                     }
 
                     .level0 {
+                        width: 300px;
                         margin-left: 0cm;
                         word-break:keep-all;           /* 不换行 */
-                        white-space:nowrap;          /* 不换行 */
                     }
 
                     .level1 {
@@ -68,11 +68,15 @@
                     }
 
                     .level5 {
-                        margin-left: 0cm;
+                        margin-left: 25px
                     }
 
                     tr {
                         vertical-align: top;
+                    }
+
+                    .item_index {
+                        width: 50px;
                     }
                 </style>
             </head>
@@ -106,9 +110,9 @@
                         <table>
                             <xsl:for-each select="document/terms/term0">
                                 <br></br>
-                                <tr>
+                                <tr class="level0">
                                     <td>
-                                        <div class="level0">
+                                        <div>
                                             <xsl:value-of select="term_title"/>
                                         </div>
                                     </td>
@@ -117,7 +121,7 @@
                                 <xsl:for-each select="term1">
                                     <tr>
                                         <td>
-                                            <div class="level1">
+                                            <div class="level1 item_index">
                                                 <xsl:value-of select="term1_num"/>
                                             </div>
                                         </td>
@@ -186,11 +190,6 @@
                                                             </xsl:for-each>
                                                         </div>
                                                     </xsl:for-each>
-
-                                                    <!-- term_body下有input -->
-                                                    <xsl:for-each select="input">
-                                                        <xsl:value-of select="text()"></xsl:value-of>
-                                                    </xsl:for-each>
                                                 </xsl:for-each>
                                             </div>
                                         </td>
@@ -222,24 +221,20 @@
 
                             <tr>
                                 <td style="width: 230px;">代表人：</td>
-                                <td colspan="3"><xsl:value-of select="document/sign/first-signature"/></td>
+                                <td colspan="3"><xsl:value-of select="document/sign/@party_a_legal_contact"></xsl:value-of></td>
                                 <td style="width: 230px;">代表人：</td>
-                                <td colspan="3"><xsl:value-of select="document/sign/second-signature"/></td>
+                                <td colspan="3"><xsl:value-of select="document/sign/@party_a_legal_contact"></xsl:value-of></td>
                             </tr>
                         </tbody>
                     </table>
                     <!-- 日期单独一个table表示 -->
                     <table>
                         <tr>
-                            <td style="width:7%"><xsl:value-of select="document/sign/first-year"/></td><td>年</td>
-                            <td style="width:5%"><xsl:value-of select="document/sign/first-month"/></td><td>月</td>
-                            <td style="width:5%"><xsl:value-of select="document/sign/first-day"/></td><td>日</td>
+                            <td style="width:20%"><xsl:value-of select="document/sign/@party_a_sign_date"></xsl:value-of></td><td></td>
 
                             <td style="width:30%"></td>
 
-                            <td style="width:7%"><xsl:value-of select="document/sign/second-year"/></td><td>年</td>
-                            <td style="width:5%"><xsl:value-of select="document/sign/second-month"/></td><td>月</td>
-                            <td style="width:5%"><xsl:value-of select="document/sign/second-day"/></td><td>日</td>
+                            <td style="width:20%"><xsl:value-of select="document/sign/@party_b_sign_date"></xsl:value-of></td><td></td>
 
                             <td style="width:30%"></td>
                         </tr>
