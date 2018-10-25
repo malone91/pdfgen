@@ -5,6 +5,13 @@
                         font-family: SimSun;
                         /* it is just A4 size */
                         size: 8.5in 11in;
+                        /* 设置页眉 */
+                        @top-left {
+                            content: element(left-header);
+                        }
+                        @top-right {
+                            content: element(right-header);
+                        }
                         /* 设置页脚 */
                         @bottom-center {
                             content: counter(page) "/" counter(pages);
@@ -13,10 +20,22 @@
                     *{margin:0;padding:0;}
                     body {
                         font-family:'SimSun';font-size:10.5pt;
+                        font-weight: bold;
                     }
 
-                    h1,h4 {
-                       font-weight: normal;
+                    div.left-header {
+                        width:360px;
+                        display: block;
+                        position: running(left-header);
+                        border-bottom: 1px solid black;
+                        height: 20px;
+                    }
+                    div.right-header {
+                        width: 360px;
+                        display: block;
+                        position: running(right-header);
+                        border-bottom: 1px solid black;
+                        height: 20px;
                     }
 
                     .level0 {
@@ -58,19 +77,19 @@
 </head>
 <body>
 <body>
+<div class="left-header">
+<p style="margin:-3px 0px;font-weight: normal;">经销合同</p>
+</div>
+<div class="right-header">
+<p style="margin:-3px 300px;font-weight: normal;">国美电器</p>
+</div>
 <br/>
 <br/>
 <br/>
-<h1 class="text-center">
-<span style="border-bottom:1px solid #000;padding:0 150px;"/>
-        
-        （品牌）定制协议
-    </h1>
+<h1 class="text-center">经销采购合同书</h1>
 <br/>
 <br/>
-<h4 style="text-align:right;">主合同编号：<span style="border-bottom:1px solid #000;padding:0 50px;">$!{}</span>
-</h4>
-<h4 style="text-align:right;">本协议编号：<span style="border-bottom:1px solid #000;padding:0 50px;">$!{}</span>
+<h4 style="text-align:right;">合同编号：<span style="border-bottom:1px solid #000;padding:0 50px;">$!{contract_id}</span>
 </h4>
 <br/>
 <br/>
@@ -81,8 +100,38 @@
 </h4>
 <br/>
 <h4>
+<span style="display:inline-block; width:200px">注册地址：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_a_reg_addr}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">经营地址：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_a_bus_addr}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">法定代表人：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_a_legal_contact}</span>
+</h4>
+<br/>
+<h4>
 <span style="display:inline-block; width:200px">乙方（需方）：</span>
 <span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_b_name}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">注册地址：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_b_reg_addr}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">经营地址：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_b_bus_addr}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">法定代表人：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_b_legal_contact}</span>
 </h4>
 <br/>
 </div>
