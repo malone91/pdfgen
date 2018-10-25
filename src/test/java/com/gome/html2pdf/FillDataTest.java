@@ -43,10 +43,22 @@ public final class FillDataTest {
 
         VelocityContext context = new VelocityContext();
         context.put("contract_id", "20181025");
-        context.put("first", "firstValue");
-        context.put("companyName", "公司名称");
-        context.put("userCode", "1110000111555555");
-        context.put("projectCode", "159848787861513");
+        context.put("category", "categoryValue");
+        context.put("brand", "brandValue");
+        context.put("gross_profit", "gross_profit_value");
+        context.put("po_comp", "po_comp_value");
+        context.put("po_change_days", "po_change_days_value");
+        context.put("term_days", "term_days_value");
+        context.put("loan_settle_option", "loan_settle_option_value");
+        context.put("free_interest_bank_months", "free_interest_bank_months_value");
+        context.put("free_interest_com_months", "free_interest_com_months_value");
+        context.put("price_cut_days", "price_cut_days_value");
+        context.put("promotion_days", "promotion_days_value");
+        context.put("price_cut_option", "price_cut_option_value");
+        context.put("terms_other", "terms_other_value");
+        context.put("sign_location", "sign_location_value");
+        context.put("con_date_begin", "con_date_begin_value");
+        context.put("con_date_end", "con_date_end_value");
         //页眉 页脚
         context.put("left-head", "代销净h价合同");
         context.put("right-head", "abc");
