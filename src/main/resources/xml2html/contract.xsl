@@ -84,6 +84,14 @@
         <div class="left-header"><p style="margin:-3px 0px;"><xsl:value-of select="document/left-head"></xsl:value-of></p></div>
         <div class="right-header"><p style=""><xsl:value-of select="document/left-head"></xsl:value-of></p></div>
         <!-- 合同标题 -->
+        <div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+        </div>
         <h1 class="text-center"><xsl:value-of select="document/title"></xsl:value-of></h1>
         <!-- 合同信息 -->
         <div style="padding:20px;" class="clearfix">

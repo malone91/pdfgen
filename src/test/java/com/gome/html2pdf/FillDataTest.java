@@ -42,7 +42,8 @@ public final class FillDataTest {
         String destFilePath = destPathFile + File.separator + "templatePdf.pdf";
 
         VelocityContext context = new VelocityContext();
-        context.put("contract_id", "合同编号");
+        context.put("contract_id", "20181025");
+        context.put("first", "firstValue");
         context.put("companyName", "公司名称");
         context.put("userCode", "1110000111555555");
         context.put("projectCode", "159848787861513");

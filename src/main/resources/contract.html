@@ -1,250 +1,304 @@
 <html>
 <head>
 <style type="text/css">
-        @page {
-        font-family: SimSun;
-        /* it is just A4 size */
-        size: 8.5in 11in;
-        
-        /*border-top: 1px solid black;*/
-        /* 设置页眉 */
-        @top-left {
-                content: element(left-header);
-        }
-        @top-right {
-                content: element(right-header);
-        }
-        /* 设置页脚 */
-        @bottom-center {
-                content: counter(page) "/" counter(pages);
-        }
-        }
-        *{margin:0;padding:0;}
-        body {
-        font-family:'SimSun';font-size:10.5pt;
-        }/*宋五*/
-        li{list-style:none;}
-        h1{font-size:15.75pt;}/*黑三*/
-        h2{font-size:12pt;}/*宋小四*/
-        p{line-height:2;}
-        .clearfix:after{clear:both;content:'';display:block;}
-        .text-center{text-align:center;}
-        .table td{border:0.75pt solid #000;padding:0 5.03pt;font-weight:normal;line-height:20.8pt;word-break: break-word;}
-        .table th{background-color:#fff;line-height:20.8pt;}
-        td.bor,span.bor{border-bottom:1px solid #000;padding:0 10px;}
-        .apply-type li{width:50%;}
-        .apply-type span{display:inline-block;width:14px;height:14px;vertical-align:text-bottom;background:url(/data/App/jgoms.cfaoe.local/purple.png) no-repeat;margin-right:5px;}
-        .apply-type .checked span{background-position:0 -14px;}
+                    @page {
+                    font-family: SimSun;
+                    /* it is just A4 size */
+                    size: 8.5in 11in;
+                    /* 设置页眉 */
+                    @top-left {
+                    content: element(left-header);
+                    }
+                    @top-right {
+                    content: element(right-header);
+                    }
+                    /* 设置页脚 */
+                    @bottom-center {
+                    content: counter(page) "/" counter(pages);
+                    }
+                    }
+                    *{margin:0;padding:0;}
+                    body {
+                    font-family:'SimSun';font-size:10.5pt;
+                    }/*宋五*/
+                    li{list-style:none;}
+                    h1{font-size:15.75pt;}/*黑三*/
+                    h2{font-size:12pt;}/*宋小四*/
+                    p{line-height:2;}
+                    .clearfix:after{clear:both;content:'';display:block;}
+                    .text-center{text-align:center;}
+                    .table td{border:0.75pt solid #000;padding:0 5.03pt;font-weight:normal;line-height:20.8pt;word-break: break-word;}
+                    .table th{background-color:#fff;line-height:20.8pt;}
+                    td.bor,span.bor{border-bottom:1px solid #000;padding:0 10px;}
+                    .apply-type li{width:50%;}
+                    .apply-type span{display:inline-block;width:14px;height:14px;vertical-align:text-bottom;background:url(/data/App/jgoms.cfaoe.local/purple.png) no-repeat;margin-right:5px;}
+                    .apply-type .checked span{background-position:0 -14px;}
 
-        div.left-header {
-                width:360px;
-                display: block;
-                position: running(left-header);
-                border-bottom: 1px solid black;
-                height: 20px;
-        }
-        div.right-header {
-                width: 360px;
-                display: block;
-                position: running(right-header);
-                border-bottom: 1px solid black;
-                height: 20px;
-        }
+                    div.left-header {
+                    width:360px;
+                    display: block;
+                    position: running(left-header);
+                    border-bottom: 1px solid black;
+                    height: 20px;
+                    }
+                    div.right-header {
+                    width: 360px;
+                    display: block;
+                    position: running(right-header);
+                    border-bottom: 1px solid black;
+                    height: 20px;
+                    }
 
-        .level0 {
-        margin-left: 0.5cm;
-        word-break:keep-all;           /* 不换行 */
-        white-space:nowrap;          /* 不换行 */
+                    .level0 {
+                    margin-left: 0cm;
+                    word-break:keep-all;           /* 不换行 */
+                    white-space:nowrap;          /* 不换行 */
 
-        }
-        /* from huwei */
-        .level1 {
-        margin-left: 1cm;
-        word-break:keep-all;           /* 不换行 */
-        white-space:nowrap;          /* 不换行 */
+                    }
+                    /* from huwei */
+                    .level1 {
+                    margin-left: 1.7cm;
+                    word-break:keep-all;           /* 不换行 */
+                    white-space:nowrap;          /* 不换行 */
 
-        }
+                    }
 
-        .level2 {
-        margin-left: 1.3cm;
-        }
+                    .level2 {
+                    margin-left: 0cm;
+                    }
 
-        tr {
-        vertical-align: top;
-        }
-    </style>
+                    tr {
+                    vertical-align: top;
+                    }
+                </style>
 </head>
 <body>
-<div class="left-header"><p style="margin:-3px 0px;">左页眉</p></div>
-<div class="right-header"><p style="margin:-3px 310px;">右页眉</p></div>
-<h1 class="text-center">
-        合同书标题
-    </h1>
-<div style="padding:20px;" class="clearfix">
-<table style="width:100%;table-layout:fixed;">
-<tbody>
-<tr>
-<td colspan="4" align="right">
-<h4>合同编号：</h4>
-</td>
-<td align="center" colspan="2" class="bor">20181016</td>
-</tr>
-<tr>
-<td>
-<br/>
-</td>
-</tr>
-<tr>
-<td>
-<br/>
-</td>
-</tr>
-<tr>
-<td style="width: 100px;">甲方（承销商）：</td>
-<td align="center" colspan="4" class="bor">甲方</td>
-</tr>
-<tr>
-<td style="width: 100px;">注册地址：</td>
-<td align="center" colspan="4" class="bor"/>
-</tr>
-<tr>
-<td style="width: 100px;">法定代表人：</td>
-<td align="center" colspan="4" class="bor">jia</td>
-</tr>
-<tr>
-<td style="width: 100px;">乙方（需方）：</td>
-<td align="center" colspan="4" class="bor">
-<p>乙方</p>
-</td>
-</tr>
-<tr>
-<td style="width: 100px;">注册地址：</td>
-<td align="center" colspan="4" class="bor">上海</td>
-</tr>
-<tr>
-<td style="width: 100px;">法定代表人：</td>
-<td align="center" colspan="4" class="bor">yi</td>
-</tr>
-<tr>
-<td>
-<br/>
-</td>
-</tr>
-<tr>
-<td>
-<br/>
-</td>
-</tr>
-</tbody>
-</table>
+<body>
+<div class="left-header">
+<p style="margin:-3px 0px;">经销合同</p>
 </div>
+<div class="right-header">
+<p style="margin:-3px 310px;">国美电器</p>
+</div>
+<br/>
+<br/>
+<br/>
+<h1 class="text-center">经销采购合同书</h1>
+<br/>
+<br/>
+<h4 style="text-align:right;">合同编号：<span style="border-bottom:1px solid #000;padding:0 50px;">$!{contract_id}</span>
+</h4>
+<br/>
+<br/>
+<div>
+<h4>
+<span style="display:inline-block; width:200px">甲方（供方）：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_a_name}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">注册地址：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_a_reg_addr}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">经营地址：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_a_bus_addr}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">法定代表人：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_a_legal_contact}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">乙方（需方）：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_b_name}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">注册地址：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_b_reg_addr}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">经营地址：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_b_bus_addr}</span>
+</h4>
+<br/>
+<h4>
+<span style="display:inline-block; width:200px">法定代表人：</span>
+<span style="border-bottom:1px solid #000;padding:0 150px;">$!{party_b_legal_contact}</span>
+</h4>
+<br/>
+</div>
+<br/>
+<br/>
+<div>
 <table>
+<br/>
 <tr>
 <td>
 <div class="level0">原则条款</div>
 </td>
 </tr>
+<br/>
 <tr>
 <td>
-<div class="level1">第一条</div>
+<div class="level1">第1条</div>
 </td>
 <td>
 <div class="level2">
-                        本合同书经甲乙双方通过友好协商，本着优势互补、互惠互利、共同发展的原则，依据《中华人民共和国合同法》、《中华人民共和国产品质量法》、《中华人民共和国消费者权益保护法》、《零售商供应商公平交易管理办法》等法律、法规的规定签订。
-                    </div>
+                    本合同书经甲乙双方通过友好协商，本着优势互补、互惠互利、共同发展的原则，依据《中华人民共和国合同法》、《中华人民共和国产品质量法》、《中华人民共和国消费者权益保护法》、《零售商供应商公平交易管理办法》等法律、法规的规定签订。
+                </div>
 </td>
 </tr>
+<br/>
 <tr>
 <td>
-<div class="level0">通用条款</div>
+<div class="level0">适用范围</div>
 </td>
 </tr>
+<br/>
 <tr>
 <td>
-<div class="level1">第二条</div>
+<div class="level1">第2条</div>
 </td>
 <td>
 <div class="level2">
-                        本合同书经甲乙双方通过友好协商，本着优势互补、互惠互利、共同发展的原则，依据《中华人民共和国合同法》、《中华人民共和国产品质量法》、《中华人民共和国消费者权益保护法》、《零售商供应商公平交易管理办法》等法律、法规的规定签订。
-                    </div>
+                    本合同的甲方代表甲方及其所属的子公司、分公司、分支机构、办事处及甲方指定的代理商。乙方代表乙方及其所属的子公司、分公司、分支机构、关联公司（甲乙双方代表公司列表详见附件一）。甲乙双方分别代表的独立法人单位应向甲乙双方出具认可并履行本合同的确认函，该确认函为本合同附件，是本合同不可分割的一部分。
+                </div>
 </td>
 </tr>
 <tr>
 <td>
-<div class="level0">通用净价</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class="level1">第三条</div>
+<div class="level1">第3条</div>
 </td>
 <td>
 <div class="level2">
-                        供货价格：指甲方按照合同约定履行了供方应尽的各项基本义务的前提下向乙方提供商品的实际价格，该价格应低于甲方给予其他所有供货渠道的商品价格。甲方应尽的基本义务包括但不限于负责将商品运输至乙方指定地点（装卸均由甲方负责）、按约定负责库存商品的处理、按约定保证提供商品销售的账面毛利率等。甲方同意，如因甲方单方原因无法履行上述义务或履行不符合约定的，甲方同意按下述方式之一处理：（1）按照主合同约定或通过签订补充协议的方式约定由乙方为甲方提供上述服务，甲方支付相应的服务费用；或（2）甲方承担相应的违约责任，按约定向乙方支付损失赔偿金或违约金。
-                    </div>
+                    本合同约定的产品具体是指：
+                    30category品类30brand品牌的产品。</div>
 </td>
 </tr>
-</table>
-<div class="clearfix">
-<table style="width:100%;table-layout:fixed;">
-<tbody>
+<br/>
 <tr>
 <td>
-<br/>
+<div class="level0">名词定义</div>
 </td>
 </tr>
-<tr>
-<td style="width: 230px;">甲方（盖章）：</td>
-<td colspan="3"/>
-<td style="width: 230px;">乙方（盖章）：</td>
-<td colspan="3"/>
-</tr>
+<br/>
 <tr>
 <td>
-<br/>
+<div class="level1">第4条</div>
+</td>
+<td>
+<div class="level2">
+                    产品：指由甲方生产或经销的符合国家质量标准及双方约定的标准并不侵犯任何第三方知识产权和合法权益的合格产品。产品包括但不限于产品本身、附件、配件、促销礼品、赠品。
+                </div>
 </td>
 </tr>
 <tr>
 <td>
-<br/>
+<div class="level1">第5条</div>
+</td>
+<td>
+<div class="level2">
+                    智能产品：通过手机APP、语音声控、蓝牙、红外、网关类、WIFI、RF、感应器等方式并借助云平台进行远程控制的产品。
+                </div>
 </td>
 </tr>
 <tr>
 <td>
-<br/>
+<div class="level1">第6条</div>
+</td>
+<td>
+<div class="level2">
+                    供货价格：指甲方按照合同约定履行了供方应尽的各项基本义务的前提下向乙方提供产品的实际价格，该价格应低于甲方给予其他所有供货渠道的商品价格。甲方应尽的基本义务包括但不限于负责将产品运输至乙方指定地点（装卸均由甲方负责）、提供促销人员负责甲方产品的销售、提供专属甲方产品销售的展台展柜、按约定负责滞销产品的处理、按约定保证提供产品销售的账面毛利率等。甲方同意，如因甲方单方原因无法履行上述义务或履行不符合约定的，甲方同意按下述方式之一处理：（1）按照主合同约定或通过签订补充协议的方式约定由乙方为甲方提供上述服务，甲方支付相应的服务费用；或（2）甲方承担相应的违约责任，按约定向乙方支付损失赔偿金或违约金。
+                </div>
 </td>
 </tr>
 <tr>
 <td>
-<br/>
+<div class="level1">第7条</div>
+</td>
+<td>
+<div class="level2">
+                    残次品：指产品在售前、售中及售后过程中，本身固有的或发生的外观、性能、质量等任何一项不符合中国国家质量标准、行业标准、厂家标准、售后服务三包标准及合同约定标准等任一标准的产品。
+                </div>
 </td>
 </tr>
 <tr>
-<td style="width: 230px;">法定代表人或授权代表（签字）：</td>
-<td colspan="3">甲方</td>
-<td style="width: 230px;">法定代表人或授权代表（签字）：</td>
-<td colspan="3">乙方</td>
+<td>
+<div class="level1">第6条</div>
+</td>
+<td>
+<div class="level2">
+                    供货价格：指甲方按照合同约定履行了供方应尽的各项基本义务的前提下向乙方提供产品的实际价格，该价格应低于甲方给予其他所有供货渠道的商品价格。甲方应尽的基本义务包括但不限于负责将产品运输至乙方指定地点（装卸均由甲方负责）、提供促销人员负责甲方产品的销售、提供专属甲方产品销售的展台展柜、按约定负责滞销产品的处理、按约定保证提供产品销售的账面毛利率等。甲方同意，如因甲方单方原因无法履行上述义务或履行不符合约定的，甲方同意按下述方式之一处理：（1）按照主合同约定或通过签订补充协议的方式约定由乙方为甲方提供上述服务，甲方支付相应的服务费用；或（2）甲方承担相应的违约责任，按约定向乙方支付损失赔偿金或违约金。
+                </div>
+</td>
 </tr>
-</tbody>
-</table>
-<table>
 <tr>
-<td style="width:10%">2018</td>
-<td>年</td>
-<td style="width:5%">10</td>
-<td>月</td>
-<td style="width:5%">10</td>
-<td>日</td>
-<td style="width:30%"/>
-<td style="width:10%">2018</td>
-<td>年</td>
-<td style="width:5%">10</td>
-<td>月</td>
-<td style="width:5%">10</td>
-<td>日</td>
-<td style="width:30%"/>
+<td>
+<div class="level1">第8条</div>
+</td>
+<td>
+<div class="level2">
+                    货到付款：指乙方在收到甲方提供的产品并进行验收入库向甲方出具入库单后5个工作日内向甲方支付货款。
+                </div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="level1">第9条</div>
+</td>
+<td>
+<div class="level2">合同年度：指合同有效期。</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="level1">第10条</div>
+</td>
+<td>
+<div class="level2">
+                    账期：指甲方产品进入乙方指定仓库（以乙方入库单为准）到乙方支付货款之间的期间。
+                </div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="level1">第11条</div>
+</td>
+<td>
+<div class="level2">
+                    降价款：根据经营需要甲方向下调整给予乙方的供货价格，由此产生的新老供货价格的差额。
+                </div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="level1">第12条</div>
+</td>
+<td>
+<div class="level2">
+                    给乙方造成名誉损失的情况：是指给乙方或乙方相关公司造成名誉、商号、商标、商誉负面影响的情况，包括但不限于：1、因甲方产品问题包括但不限于质量、假冒伪劣、虚假宣传、侵犯他人知识产权等问题，售后服务问题、价格问题或其它甲方原因被媒体（媒体包括但不限于电视、广播、报纸、杂志、网络等）曝光的；2、因甲方产品问题、售后服务问题、价格问题被有关部门、机构、消协、质量监督部门等公告的；3、虽未被曝光，但因甲方产品问题或售后服务问题造成相当多人员认为或知悉乙方提供的产品或服务存在问题的；4、甲方产品质量出现批量问题，致使乙方名誉或商誉受到负面影响的； 5、甲方制作的展柜、展台、展架及吊楣造成第三人伤亡，致使乙方名誉或者商誉受到负面影响的；6、甲方及甲方工作人员对乙方进行言论诋毁及其它甲方给乙方或乙方相关公司造成名誉、商号、商标、商誉等负面影响的情况。甲方同意出现以上情况并造成乙方损失的，甲方全额赔偿乙方相关的产品、运输、管理成本及因此导致的其他开支及损失。甲方同意在乙方提出赔偿要求后30日内全额向乙方支付赔偿金额。如甲方逾期未支付，作为一种替代方式，甲方同意乙方在最近一次应支付给甲方的货款中扣除该赔偿金额。
+                </div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="level1">第13条</div>
+</td>
+<td>
+<div class="level2">
+                    ECP平台：指Enterprise Cooperation Platform 系统，是双方指定网上供应链平台，网址为http://gomeb2b.gome.com.cn。对于合同中约定及实际业务中涉及的订单确认、发货、对账、结算、数据查询等业务，甲乙双方可以通过ECP平台来处理。甲方通过ECP平台进行上述操作的，应遵守ECP平台的操作规程。
+                
+                    甲方同意：甲方通过其数字证书(含ECP平台用户账号【UKEY】等信息)进入ECP平台系统进行的所有操作，均为甲方自身行为，并视为甲方履行本合同的行为，对甲方具有法律约束力。甲方通过ECP平台自行进行内部权限的设置、管理和维护。甲方应妥善保管数字证书和密码，保证不将其泄露或提供给他人使用，如数字证书或密码遗失、被盗，甲方应及时办理挂失手续，挂失生效前发生的风险和损失由甲方承担。甲方的数字证书信息需变更的，应及时以书面形式告知乙方，否则，甲方承担由此产生的一切风险和损失，由此给乙方造成损失的，甲方应承担赔偿责任。
+                </div>
+</td>
 </tr>
 </table>
 </div>
+</body>
 </body>
 </html>

@@ -18,10 +18,10 @@ public class Xml2HtmlTest {
         InputStream stream = null;
         //创建xml文件输入流
         try {
-            inputStream = this.getClass().getClassLoader().getResourceAsStream("xml2html/contract.xml");
+            inputStream = this.getClass().getClassLoader().getResourceAsStream("xml2html/new.xml");
             Source source = new StreamSource(inputStream);
             //创建xsl输入流
-            stream = this.getClass().getClassLoader().getResourceAsStream("xml2html/contract.xsl");
+            stream = this.getClass().getClassLoader().getResourceAsStream("xml2html/new.xsl");
             Source template = new StreamSource(stream);
 
             PrintStream stm = new PrintStream(new File("src/main/resources/contract.html"));
