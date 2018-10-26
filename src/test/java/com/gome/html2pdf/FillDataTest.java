@@ -60,8 +60,8 @@ public final class FillDataTest {
 //        context.put("con_date_begin", "con_date_begin_value");
 //        context.put("con_date_end", "con_date_end_value");
         //页眉 页脚
-        context.put("left-head", "代销净h价合同");
-        context.put("right-head", "abc");
+        context.put("contract_id", "代销净h价合同");
+        context.put("contract_id", "abc");
         StringWriter stringWriter = new StringWriter();
         velocityEngine.mergeTemplate(vm, "UTF-8", context, stringWriter);
         try {

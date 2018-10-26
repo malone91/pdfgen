@@ -20,6 +20,11 @@
                         font-family:'SimSun';font-size:10.5pt;
                     }
 
+                    .text-center {
+                        text-align: center;
+                        font-size: 15pt;
+                    }
+
                     h1,h4 {
                        font-weight: normal;
                     }
@@ -68,7 +73,7 @@
                     <br></br>
 
                     <!-- 合同标题 -->
-                    <h1 class="text-center" ><span style="border-bottom:1px solid #000;padding:0 150px;"></span><xsl:value-of select="document/title"></xsl:value-of></h1>
+                    <div class="text-center" ><span style="border-bottom:1px solid #000;padding:0 105px;"></span><xsl:value-of select="document/title"></xsl:value-of></div>
                     <br></br>
                     <br></br>
                     <xsl:for-each select="document/agg_id">
@@ -87,96 +92,6 @@
 
                     <!-- 合同条款 -->
                     <div>
-                        <table>
-                            <xsl:for-each select="document/terms/term0">
-                                <br></br>
-                                <tr class="level0">
-                                    <td>
-                                        <div>
-                                            <xsl:value-of select="term_title"/>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <br></br>
-                                <xsl:for-each select="term1">
-                                    <tr>
-                                        <td>
-                                            <div class="level1 item_index">
-                                                <xsl:value-of select="term1_num"/>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="level2">
-                                                <!--<xsl:value-of select="term1_body">-->
-
-                                                <!--</xsl:value-of>-->
-                                                <xsl:for-each select="term1_body">
-                                                    <!-- term_body的内容 -->
-                                                    <xsl:value-of select="text()"></xsl:value-of>
-                                                    <!-- 遍历简单的填空内容-->
-                                                    <xsl:for-each select="input">
-                                                       <xsl:value-of select="text()"></xsl:value-of>
-                                                       <!-- input内的值不为空则不显示占位符-->
-                                                       <xsl:if test="@id != '' ">
-                                                           <span style="border-bottom:1px solid #000;padding:0 width:30px;">
-                                                               $!{<xsl:value-of select="@id"></xsl:value-of>}
-                                                           </span>
-                                                       </xsl:if>
-                                                   </xsl:for-each>
-                                                    <!-- 遍历嵌套的二级内容 -->
-                                                    <xsl:for-each select="list">
-                                                        <!--<xsl:if test="@id != '' ">-->
-                                                            <span style="border-bottom:1px solid #000;padding:0 width:30px;">
-                                                                $!{<xsl:value-of select="@id"></xsl:value-of>}
-                                                            </span>
-                                                        <!--</xsl:if>-->
-                                                        <xsl:value-of select="text()"></xsl:value-of>
-                                                        <!-- 三级缩进 -->
-                                                        <div class="level3">
-                                                            <xsl:for-each select="term2">
-                                                                <br></br>
-                                                                <xsl:value-of select="term2_num"></xsl:value-of>
-                                                                <xsl:for-each select="term2_body">
-                                                                    <xsl:value-of select="text()"></xsl:value-of>
-                                                                    <xsl:for-each select="input">
-                                                                        <!-- 根据第一个内容是否为空判断先遍历哪个 -->
-                                                                        <xsl:value-of select="text()"></xsl:value-of>
-                                                                        <!-- input内的值不为空则不显示占位符-->
-                                                                        <xsl:if test="@type = 'number' ">
-                                                                            <span style="border-bottom:1px solid #000;padding:0 width:70px;">
-                                                                                $!{<xsl:value-of select="@id"></xsl:value-of>}
-                                                                            </span>
-                                                                        </xsl:if>
-                                                                    </xsl:for-each>
-                                                                </xsl:for-each>
-                                                            </xsl:for-each>
-                                                        </div>
-                                                    </xsl:for-each>
-
-                                                    <!-- term_body下遍历term1 含有序号的 -->
-                                                    <xsl:for-each select="term1">
-                                                        <br></br>
-                                                        <div class="level4">
-                                                            <xsl:value-of select="term1_num"></xsl:value-of>
-                                                            <xsl:for-each select="term1_body">
-                                                                <xsl:value-of select="text()"></xsl:value-of>
-                                                                <xsl:for-each select="term2">
-                                                                    <br></br>
-                                                                    <div class="level5">
-                                                                        <xsl:value-of select="term2_num"></xsl:value-of>
-                                                                        <xsl:value-of select="term2_body"></xsl:value-of>
-                                                                    </div>
-                                                                </xsl:for-each>
-                                                            </xsl:for-each>
-                                                        </div>
-                                                    </xsl:for-each>
-                                                </xsl:for-each>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </xsl:for-each>
-                            </xsl:for-each>
-                        </table>
                     </div>
                 </body>
 
