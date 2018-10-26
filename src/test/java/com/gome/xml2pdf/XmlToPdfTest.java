@@ -22,7 +22,8 @@ public class XmlToPdfTest {
         VelocityEngine engine = new VelocityEngine();
         engine.init();
         StringWriter stringWriter = new StringWriter();
-        engine.evaluate(context, stringWriter, "", htmlString.toString());
+//        String doubleFile = htmlString + htmlString;
+        engine.evaluate(context, stringWriter, "", htmlString);
         PdfUtil.html2Pdf(stringWriter.toString(), "E:/templatePdf.pdf");
     }
 
