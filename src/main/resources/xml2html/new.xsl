@@ -19,6 +19,7 @@
                         }
                         /* 设置页脚 */
                         @bottom-center {
+                            font-size: 9pt;
                             content: counter(page) "/" counter(pages);
                         }
                     }
@@ -44,7 +45,6 @@
                     }
 
                     .level0 {
-                        width: 300px;
                         margin-left: 0cm;
                         word-break:keep-all;           /* 不换行 */
                     }
@@ -138,7 +138,7 @@
                                                        <xsl:value-of select="text()"></xsl:value-of>
                                                        <!-- input内的值不为空则不显示占位符-->
                                                        <xsl:if test="@id != '' ">
-                                                           <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                                                           <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{<xsl:value-of select="@id"></xsl:value-of>}
                                                            </span>
                                                        </xsl:if>
@@ -146,7 +146,7 @@
                                                     <!-- 遍历嵌套的二级内容 -->
                                                     <xsl:for-each select="list">
                                                         <!--<xsl:if test="@id != '' ">-->
-                                                            <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                                                            <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                 $!{<xsl:value-of select="@id"></xsl:value-of>}
                                                             </span>
                                                         <!--</xsl:if>-->
@@ -163,7 +163,7 @@
                                                                         <xsl:value-of select="text()"></xsl:value-of>
                                                                         <!-- input内的值不为空则不显示占位符-->
                                                                         <xsl:if test="@type = 'number' ">
-                                                                            <span style="border-bottom:1px solid #000;padding:0 width:70px;">
+                                                                            <span style="border-bottom:1px solid #000;padding:0 70px;">
                                                                                 $!{<xsl:value-of select="@id"></xsl:value-of>}
                                                                             </span>
                                                                         </xsl:if>
@@ -177,17 +177,25 @@
                                                     <xsl:for-each select="term1">
                                                         <br></br>
                                                         <div class="level4">
-                                                            <xsl:value-of select="term1_num"></xsl:value-of>
-                                                            <xsl:for-each select="term1_body">
-                                                                <xsl:value-of select="text()"></xsl:value-of>
-                                                                <xsl:for-each select="term2">
-                                                                    <br></br>
-                                                                    <div class="level5">
-                                                                        <xsl:value-of select="term2_num"></xsl:value-of>
-                                                                        <xsl:value-of select="term2_body"></xsl:value-of>
-                                                                    </div>
-                                                                </xsl:for-each>
-                                                            </xsl:for-each>
+                                                            <table>
+                                                                <tr>
+                                                                    <td><div>
+                                                                        <xsl:value-of select="term1_num"></xsl:value-of>
+                                                                    </div></td>
+                                                                    <td><div>
+                                                                        <xsl:for-each select="term1_body">
+                                                                            <xsl:value-of select="text()"></xsl:value-of>
+                                                                            <xsl:for-each select="term2">
+                                                                                <br></br>
+                                                                                <div class="level5">
+                                                                                    <xsl:value-of select="term2_num"></xsl:value-of>
+                                                                                    <xsl:value-of select="term2_body"></xsl:value-of>
+                                                                                </div>
+                                                                            </xsl:for-each>
+                                                                        </xsl:for-each>
+                                                                    </div></td>
+                                                                </tr>
+                                                            </table>
                                                         </div>
                                                     </xsl:for-each>
                                                 </xsl:for-each>

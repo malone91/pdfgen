@@ -14,6 +14,7 @@
                         }
                         /* 设置页脚 */
                         @bottom-center {
+                            font-size: 9pt;
                             content: counter(page) "/" counter(pages);
                         }
                     }
@@ -39,7 +40,6 @@
                     }
 
                     .level0 {
-                        width: 300px;
                         margin-left: 0cm;
                         word-break:keep-all;           /* 不换行 */
                     }
@@ -180,9 +180,9 @@
 <td>
 <div class="level2">
                     本合同约定的产品具体是指：
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{category}
-                                                           </span>品类<span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                                                           </span>品类<span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{brand}
                                                            </span>品牌的产品。</div>
 </td>
@@ -338,7 +338,7 @@
 <td>
 <div class="level2">
                     甲方同意甲方每台产品在乙方销售的账面毛利率不低于
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{gross_profit}
                                                            </span>
                         %，核算期间为当月一日至当月最后一日。如因甲方管理市场产品价格原因导致乙方销售甲方产品的实际毛利率低于双方约定，则视为甲方违约，甲方同意承担相应的违约责任，由甲方负责补足约定零售成交价与实际零售成交价之间的差额，在甲方最近的一次货款结算时予以扣除，甲方在增值税专用发票（本合同所述增值税专用发票特指税率为17%/16%的增值税专用发票，下同）上直接列明，不在价格中直接低开，乙方不再向甲方开具发票。
@@ -352,7 +352,7 @@
 <td>
 <div class="level2">
                     甲乙双方合作生产OEM产品，甲方应保证OEM产品对乙方的供价不得高于乙方销售的同等质量、档次、规格的型号产品供价的
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{gross_profit}
                                                            </span>%。</div>
 </td>
@@ -381,7 +381,7 @@
 <td>
 <div class="level2">
                     订单达成一致后，甲方按乙方订单要求的送货时间送达乙方指定地点。对于乙方未提交订单甲方擅自送货的，乙方有权拒收。对于甲方未按照乙方提交的订单数量送货的，如果数量少于订单确认的数量（乙方不同意接收的残次商品除外），甲方应在2日内将订单差异补齐，否则视为甲方违约，由此给乙方造成的全部损失由甲方承担，同时甲方按照乙方订单额的
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{po_comp}
                                                            </span>
                         %向乙方支付补偿金，乙方并有权要求甲方继续提供不足部分商品；数量多于订单确认的数量，乙方对于多出的部分有权拒收。
@@ -395,7 +395,7 @@
 <td>
 <div class="level2">
                     乙方在要求的送货时间前
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{po_change_days}
                                                            </span>
                         日有权撤销或变更订单，乙方撤销或变更订单的，应书面通知甲方，通知自发出之日起生效。
@@ -453,7 +453,7 @@
 <td>
 <div class="level2">
                     乙方从甲方购进的产品按账期结算，甲方给予乙方的账期为
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{term_days}
                                                            </span>
                         天，账期的计算起点为甲方产品进入乙方库房之日（以乙方入库单为准）。在账期内，甲方应按照乙方订单的需求无条件向乙方供货。
@@ -487,24 +487,24 @@
 <td>
 <div class="level2">
                     货款结算方式为
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                 $!{loan_settle_option}
                                                             </span>（在以下几种方式中任选一种）
                         <div class="level3">
 <br/>1)电/信汇；<br/>2)
-                                <span style="border-bottom:1px solid #000;padding:0 width:70px;">
+                                <span style="border-bottom:1px solid #000;padding:0 70px;">
                                                                                 $!{free_interest_bank_months}
                                                                             </span>
                                     个月无息银行承兑汇票；
                                 <br/>3)
-                                单笔付款大于等于<span style="border-bottom:1px solid #000;padding:0 width:70px;">
+                                单笔付款大于等于<span style="border-bottom:1px solid #000;padding:0 70px;">
                                                                                 $!{free_int_loan_amount}
-                                                                            </span>万元<span style="border-bottom:1px solid #000;padding:0 width:70px;">
+                                                                            </span>万元<span style="border-bottom:1px solid #000;padding:0 70px;">
                                                                                 $!{free_int_loan_months}
-                                                                            </span>个月无息银行承兑汇票，<span style="border-bottom:1px solid #000;padding:0 width:70px;">
+                                                                            </span>个月无息银行承兑汇票，<span style="border-bottom:1px solid #000;padding:0 70px;">
                                                                                 $!{tel_trans_amount}
                                                                             </span>|万元电/信汇；<br/>4)
-                                <span style="border-bottom:1px solid #000;padding:0 width:70px;">
+                                <span style="border-bottom:1px solid #000;padding:0 70px;">
                                                                                 $!{free_interest_com_months}
                                                                             </span>个月无息商业承兑汇票。</div>
 </div>
@@ -807,13 +807,13 @@
 <td>
 <div class="level2">
                     在乙方进货后，甲方产品供价下调产生降价款时，甲方应
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                 $!{price_cut_option}
                                                             </span>：
                         <div class="level3">
 <br/>1、对乙方尚未售出的（售出是指乙方已售出并已发货的商品）该产品进行价格补差；<br/>2、
                                 对
-                                <span style="border-bottom:1px solid #000;padding:0 width:70px;">
+                                <span style="border-bottom:1px solid #000;padding:0 70px;">
                                                                                 $!{price_cut_days}
                                                                             </span>
                                     日内乙方自甲方购进的全部产品进行价格补差。补差确认时间为乙方提供相关数据后二个工作日内，甲方须向乙方出具书面的降价确认函，标明调价的型号、数量、价格，加盖有效印章或有效授权人员签字；甲方交纳降价款的时间为最近一次货款结算日，支付方式为现款或账扣。
@@ -848,7 +848,7 @@
 <td>
 <div class="level2">
                     甲方同意与乙方开展每月不少于【
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{promotion_days}
                                                            </span>
                         】次的共同营销，营销活动投入不少于甲方给予其他任何零售商（包括但不限于电子商务）投入的促销资源，包括但不限于路演、降价促销、联合报广、店内广告宣传、签售、线上引流、新品首发等，乙方积极配合并在备货、场地提供、人员支持、营销方案等方面给予甲方必要的支持；如遇重大节假日，甲方应优先保障乙方的产品供应，并保证乙方在市场的促销能力处于优势。
@@ -948,7 +948,7 @@
 <td>
 <div class="level2">
                     甲方向乙方提供产品在乙方门店进行销售，甲方应向乙方所代表的每个法人单位交纳所销售甲方提供产品的质量保证金。甲方按
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{promotion_days}
                                                            </span>
                         万元/法人单位向乙方交纳质量保证金，甲方自合同签定之日起5日内向乙方交纳质量保证金。若甲方未能按时向乙方支付质量保证金，甲方同意乙方在第一次结算货款时扣减与质保金等额货款。在双方合作期间内，售后质量保证金无论因何原因发生扣除的，甲方应于扣除之日起3日内补足质量保证金，逾期应承担日千分之一的逾期付款的违约责任。如甲方撤场，从产品清场之日起至乙方已经销售的甲方所有产品保修期满止发生的一切欠收、退货、维修及赔偿责任等费用，由乙方直接用甲方交纳的质量保证金抵补。剩余的质量保证金在产品清场12个月后且甲方提供的所有产品保修期均已届满后10日内由乙方退还给甲方。如该质量保证金不足抵补上述费用则乙方享有追偿权。甲方在上一合同年度已经向乙方交纳的质保金，可继续沿用，低于本合同约定金额部分，由甲方按本合同约定的时间补足。在合同履行期间或终止后，如甲方对乙方存在应付未付的债务，乙方有权从该保证金中扣除相应金额而无需提前取得甲方同意。保证金发生扣除的，乙方在扣除后五日内通知甲方，甲方按前述约定的时间补足。
@@ -1017,11 +1017,29 @@
 <div class="level2">
                     除本合同另有明确约定的情形外，乙方在下列情况下享有解除合同的权利：
                     <br/>
-<div class="level4">1、
+<div class="level4">
+<table>
+<tr>
+<td>
+<div>1、</div>
+</td>
+<td>
+<div>
                             甲方无正当理由停止向乙方供货的，或甲方收到乙方订单逾期5日未向乙方按订单约定数量供货达三次以上（含三次）的；
                         </div>
+</td>
+</tr>
+</table>
+</div>
 <br/>
-<div class="level4">2、
+<div class="level4">
+<table>
+<tr>
+<td>
+<div>2、</div>
+</td>
+<td>
+<div>
                             甲方可能出现包括但不限于以下情况之一的：
                             <br/>
 <div class="level5">①
@@ -1064,10 +1082,25 @@
                                     甲方的增值税一般纳税人资格被取消的。
                                 </div>
 </div>
+</td>
+</tr>
+</table>
+</div>
 <br/>
-<div class="level4">3、
+<div class="level4">
+<table>
+<tr>
+<td>
+<div>3、</div>
+</td>
+<td>
+<div>
                             甲方发生其他严重违反合同约定的行为，经乙方书面催告7日后仍不改正的。
                         </div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </td>
 </tr>
@@ -1098,7 +1131,7 @@
 <td>
 <div class="level2">
                     甲乙双方另行约定事项：（另行约定条款与本合同其他条款内容不一致时，以另行约定为准）
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{terms_other}
                                                            </span>
 </div>
@@ -1195,7 +1228,7 @@
 <td>
 <div class="level2">
                     本合同于
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{sign_location}
                                                            </span>（北京鹏润大厦/乙方注册地）签订。</div>
 </td>
@@ -1214,9 +1247,9 @@
 <td>
 <div class="level2">
                     本合同有效期自
-                    <span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                    <span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{con_date_begin}
-                                                           </span>起，至<span style="border-bottom:1px solid #000;padding:0 width:30px;">
+                                                           </span>起，至<span style="border-bottom:1px solid #000;padding:0 30px;">
                                                                $!{con_date_end}
                                                            </span>止。</div>
 </td>
