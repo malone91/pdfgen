@@ -57,7 +57,7 @@ public final class WaterMarkUtil {
                      height = height + textH*3) {
                     for (int width = interval + textW; width < pageRect.getWidth() + textW;
                          width = width + textW*2) {
-                        under.showTextAligned(Element.ALIGN_LEFT
+                        under.showTextAligned(Element.ALIGN_RIGHT
                                 , waterMarkName, width - textW,
                                 height - textH, 30);
                     }
