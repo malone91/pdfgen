@@ -3,6 +3,8 @@
     <!-- 页眉 标题 编号 -->
     <header-left>经销合同</header-left>
     <header-right>国美电器</header-right>
+    <!-- 设置是否需要页脚 -->
+    <footer-display>true</footer-display>
     <title>经销采购合同书</title>
     <contract_id id="contract_id">合同编号：</contract_id>
 
