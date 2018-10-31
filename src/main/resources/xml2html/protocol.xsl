@@ -89,7 +89,7 @@
                     </xsl:for-each>
                     <br></br>
                     <br></br>
-                    <div align="center">
+                    <div style="margin-left: 70px">
                         <xsl:for-each select="document/parties/party">
                             <h4>
                                 <span style="display:inline-block; width:120px">
@@ -101,25 +101,25 @@
                             <br></br>
                         </xsl:for-each>
                     </div>
-                    <br></br>
-                    <br></br>
 
                     <!-- 合同条款 -->
                     <div>
                         <!-- 开头 -->
-                        <xsl:for-each select="document/terms/agg_term0">
-                            <!-- 空格 -->
-                            <span style="border-bottom:0px solid #000;padding:0 17px;"></span>
-                            <xsl:value-of select="text()"></xsl:value-of>
-                            <xsl:for-each select="date">
-                                <span style="border-bottom:1px solid #000;padding:0 40px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span>
-                                <xsl:value-of select="following-sibling::text()[1]"/>
+                        <div style="margin-left: 70px">
+                            <xsl:for-each select="document/terms/agg_term0">
+                                <!-- 空格 -->
+                                <span style="border-bottom:0px solid #000;padding:0 17px;"></span>
+                                <xsl:value-of select="text()"></xsl:value-of>
+                                <xsl:for-each select="date">
+                                    <span style="border-bottom:1px solid #000;padding:0 40px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span>
+                                    <xsl:value-of select="following-sibling::text()[1]"/>
+                                </xsl:for-each>
+                                <xsl:for-each select="input">
+                                    <span style="border-bottom:1px solid #000;padding:0 20px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span>
+                                    <xsl:value-of select="following-sibling::text()[1]"/>
+                                </xsl:for-each>
                             </xsl:for-each>
-                            <xsl:for-each select="input">
-                                <span style="border-bottom:1px solid #000;padding:0 60px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span>
-                                <xsl:value-of select="following-sibling::text()[1]"/>
-                            </xsl:for-each>
-                        </xsl:for-each>
+                        </div>
                         <!-- 条款 -->
                             <table>
                                 <xsl:for-each select="document/terms/agg_term1">
@@ -134,24 +134,6 @@
                                                 <xsl:for-each select="agg_term1_body">
                                                     <!-- 条款正文 -->
                                                     <xsl:value-of select="text()"></xsl:value-of>
-                                                    <!-- table框 -->
-                                                    <table border="1px" cellspacing="0" cellpadding="0">
-                                                        <xsl:for-each select="table/tr">
-                                                            <tr>
-                                                                <xsl:for-each select="th">
-                                                                    <th style="width:8.6%">
-                                                                        <xsl:value-of select="text()"></xsl:value-of>
-                                                                    </th>
-                                                                </xsl:for-each>
-                                                                <xsl:for-each select="td">
-                                                                    <th style="width:8.6%">
-                                                                        <xsl:value-of select="text()"></xsl:value-of>
-                                                                    </th>
-                                                                </xsl:for-each>
-
-                                                            </tr>
-                                                        </xsl:for-each>
-                                                    </table>
                                                     <!-- input框 -->
                                                     <xsl:for-each select="input">
                                                         <!-- input内的值不为空则不显示占位符-->
@@ -174,6 +156,24 @@
                                                         <!-- 寻找input后边的文字内容 -->
                                                         <xsl:value-of select="following-sibling::text()[1]"/>
                                                     </xsl:for-each>
+                                                    <!-- table框 -->
+                                                    <table border="1px" cellspacing="0" cellpadding="0">
+                                                        <xsl:for-each select="table/tr">
+                                                            <tr>
+                                                                <xsl:for-each select="th">
+                                                                    <th style="width:8.6%">
+                                                                        <xsl:value-of select="text()"></xsl:value-of>
+                                                                    </th>
+                                                                </xsl:for-each>
+                                                                <xsl:for-each select="td">
+                                                                    <th style="width:8.6%">
+                                                                        <xsl:value-of select="text()"></xsl:value-of>
+                                                                    </th>
+                                                                </xsl:for-each>
+
+                                                            </tr>
+                                                        </xsl:for-each>
+                                                    </table>
                                                 </xsl:for-each>
                                             </div>
                                         </td>
@@ -184,7 +184,7 @@
                 </body>
 
                 <!-- sign place -->
-                <div>
+                <div  style="margin-left: 70px">
                     <table style="width:100%;table-layout:fixed;">
                         <tbody>
                             <tr><td><br></br></td></tr>

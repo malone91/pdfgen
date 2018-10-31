@@ -54,6 +54,16 @@
                     </tr>
                     <tr>
                         <td id="notes">享受主合同约定的除月返外的所有费用项目。</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 </table>
             </agg_term1_body>
@@ -146,7 +156,8 @@
             <agg_term1_num>十六、</agg_term1_num>
             <agg_term1_body>
                 本协议有效期限：自
-                <date id="agg_date_begin"></date>起，至
+                <date id="agg_date_begin"></date>
+                起，至
                 <date id="agg_date_end"></date>止。
             </agg_term1_body>
         </agg_term1>
