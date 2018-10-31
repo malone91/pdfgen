@@ -23,8 +23,8 @@ public class XmlToPdfTest {
 
     @Test
     public void generatePdf() throws Exception {
-//        String htmlString = Xml2HtmlStringUtil.transferXml2Html("xml2html/1026.xml", "xml2html/1026.xsl");
-        String htmlString = Xml2HtmlStringUtil.transferXmlString2Html("xml2html/1026.xsl");
+        String htmlString = Xml2HtmlStringUtil.transferXml2Html("xml2html/protocol.xml", "xml2html/protocol.xsl");
+//        String htmlString = Xml2HtmlStringUtil.transferXmlString2Html("xml2html/1026.xsl");
         VelocityContext context = new VelocityContext();
         context.put("contract_id", "abc");
         VelocityEngine engine = new VelocityEngine();

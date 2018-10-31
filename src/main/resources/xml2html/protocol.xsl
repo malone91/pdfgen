@@ -18,6 +18,8 @@
                     *{margin:0;padding:0;}
                     body {
                         font-family:'SimSun';font-size:10.5pt;
+                        <!-- 1.5倍行距 -->
+                        line-height: 15.75pt;
                     }
 
                     .text-center {
@@ -70,20 +72,32 @@
                 <body>
                     <br></br>
                     <br></br>
-                    <br></br>
-
                     <!-- 合同标题 -->
-                    <div class="text-center" ><span style="border-bottom:1px solid #000;padding:0 105px;"></span><xsl:value-of select="document/title"></xsl:value-of></div>
+                    <div class="text-center"><span style="border-bottom:1px solid #000;padding:0 105px;"></span><xsl:value-of select="document/title"></xsl:value-of></div>
+                    <br></br>
                     <br></br>
                     <br></br>
                     <xsl:for-each select="document/agg_id">
-                        <h4 style="text-align:right;"><xsl:value-of select="text()"></xsl:value-of><span style="border-bottom:1px solid #000;padding:0 50px;">$!{<xsl:value-of select="@contract_id"></xsl:value-of>}</span></h4>
+                        <h4 style="text-align:right;"><xsl:value-of select="text()"></xsl:value-of>
+                            <xsl:if test="@id = 'contract_id' ">
+                                <span style="border-bottom:1px solid #000;padding:0 45px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span>
+                            </xsl:if>
+                            <xsl:if test="@id = 'agg_id' ">
+                                <span style="border-bottom:1px solid #000;padding:0 45px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span>
+                            </xsl:if>
+                        </h4>
                     </xsl:for-each>
                     <br></br>
                     <br></br>
-                    <div>
+                    <div align="center">
                         <xsl:for-each select="document/parties/party">
-                            <h4><span style="display:inline-block; width:200px"><xsl:value-of select="text()"></xsl:value-of></span><span style="border-bottom:1px solid #000;padding:0 150px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span></h4>
+                            <h4>
+                                <span style="display:inline-block; width:120px">
+                                <xsl:value-of select="text()"></xsl:value-of>
+                                </span>
+                                    <span style="border-bottom:1px solid #000;padding:0 200px;">$!{<xsl:value-of select="@id"></xsl:value-of>}
+                                </span>
+                            </h4>
                             <br></br>
                         </xsl:for-each>
                     </div>
@@ -92,6 +106,80 @@
 
                     <!-- 合同条款 -->
                     <div>
+                        <!-- 开头 -->
+                        <xsl:for-each select="document/terms/agg_term0">
+                            <!-- 空格 -->
+                            <span style="border-bottom:0px solid #000;padding:0 17px;"></span>
+                            <xsl:value-of select="text()"></xsl:value-of>
+                            <xsl:for-each select="date">
+                                <span style="border-bottom:1px solid #000;padding:0 40px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span>
+                                <xsl:value-of select="following-sibling::text()[1]"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="input">
+                                <span style="border-bottom:1px solid #000;padding:0 60px;">$!{<xsl:value-of select="@id"></xsl:value-of>}</span>
+                                <xsl:value-of select="following-sibling::text()[1]"/>
+                            </xsl:for-each>
+                        </xsl:for-each>
+                        <!-- 条款 -->
+                            <table>
+                                <xsl:for-each select="document/terms/agg_term1">
+                                    <tr>
+                                        <td>
+                                            <div class="level1 item_index">
+                                                <xsl:value-of select="agg_term1_num"></xsl:value-of>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="level2">
+                                                <xsl:for-each select="agg_term1_body">
+                                                    <!-- 条款正文 -->
+                                                    <xsl:value-of select="text()"></xsl:value-of>
+                                                    <!-- table框 -->
+                                                    <table border="1px" cellspacing="0" cellpadding="0">
+                                                        <xsl:for-each select="table/tr">
+                                                            <tr>
+                                                                <xsl:for-each select="th">
+                                                                    <th style="width:8.6%">
+                                                                        <xsl:value-of select="text()"></xsl:value-of>
+                                                                    </th>
+                                                                </xsl:for-each>
+                                                                <xsl:for-each select="td">
+                                                                    <th style="width:8.6%">
+                                                                        <xsl:value-of select="text()"></xsl:value-of>
+                                                                    </th>
+                                                                </xsl:for-each>
+
+                                                            </tr>
+                                                        </xsl:for-each>
+                                                    </table>
+                                                    <!-- input框 -->
+                                                    <xsl:for-each select="input">
+                                                        <!-- input内的值不为空则不显示占位符-->
+                                                        <xsl:if test="@id != '' ">
+                                                            <span style="border-bottom:1px solid #000;padding:0 30px;">
+                                                                $!{<xsl:value-of select="@id"></xsl:value-of>}
+                                                            </span>
+                                                        </xsl:if>
+                                                        <!-- 寻找input后边的文字内容 -->
+                                                        <xsl:value-of select="following-sibling::text()[1]"/>
+                                                    </xsl:for-each>
+                                                    <!-- date框 -->
+                                                    <xsl:for-each select="date">
+                                                        <!-- input内的值不为空则不显示占位符-->
+                                                        <xsl:if test="@id != '' ">
+                                                            <span style="border-bottom:1px solid #000;padding:0 30px;">
+                                                                $!{<xsl:value-of select="@id"></xsl:value-of>}
+                                                            </span>
+                                                        </xsl:if>
+                                                        <!-- 寻找input后边的文字内容 -->
+                                                        <xsl:value-of select="following-sibling::text()[1]"/>
+                                                    </xsl:for-each>
+                                                </xsl:for-each>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </xsl:for-each>
+                            </table>
                     </div>
                 </body>
 

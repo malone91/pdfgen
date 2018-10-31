@@ -4,7 +4,7 @@
         <input type="text" id="brand" width="105" underline="true" readonly="true" />
         （品牌）定制协议
     </title>
-    <contract_id id="contract_id" width="45">主合同编号：</contract_id>
+    <agg_id id="contract_id" width="45">主合同编号：</agg_id>
     <agg_id id="agg_id" width="45">本协议编号：</agg_id>
 
     <parties>
@@ -13,6 +13,156 @@
     </parties>
 
     <!-- terms -->
+    <terms>
+        <!-- 开头 -->
+        <agg_term0>
+            甲乙双方于
+            <date id="customize_date"></date>
+            签订
+            <input type="text" readonly="true" width="60" id="contract_id" ></input>
+            号《
+            <input type="text" readonly="true" width="60" id="contract_name"></input>
+            合同书》以及相关补充协议（以下统称“主合同” ）。基于主合同双方签订本协议，本协议是主合同不可分割的一部分，与主合同具有同等法律效力。
+        </agg_term0>
+
+        <!-- 条款 -->
+        <agg_term1>
+            <agg_term1_num>一、</agg_term1_num>
+            <agg_term1_body>
+                根据市场的促销需要，甲乙双方共同让利于消费者，甲乙双方的让利比例不低于2:1（即让利部分甲方承担比重应大于等于67%）。甲方根据上述标准向乙方提供价格有绝对竞争力，对市场有冲击力且能达到促销作用的产品为特价机产品（正常调价机型不视为特价机产品）。
+            </agg_term1_body>
+        </agg_term1>
+
+        <agg_term1>
+            <agg_term1_num>二、</agg_term1_num>
+            <agg_term1_body>
+                特价机产品明细表：
+                <table>
+                    <tr>
+                        <th id="sku_id" align="left" width="83">商品编码</th>
+                        <th id="sku_type" align="left" width="68">型号</th>
+                        <th id="sku_count" align="right" width="47">数量</th>
+                        <th id="o_supply_price" align="right" width="84">原供价</th>
+                        <th id="n_supply_price" align="right" width="58">现供价</th>
+                        <th id="o_sold_price" align="right" width="83">原零售价</th>
+                        <th id="n_sold_price" align="right" width="83">现零售价</th>
+                        <th id="o_policy" align="right" width="83">原合同政策</th>
+                        <th id="n_policy" align="left" width="83">现合同政策</th>
+                        <th id="o_profit" align="right" width="83">原综合利润率</th>
+                        <th id="n_profit" align="left" width="83">现综合利润率</th>
+                        <th id="notes" align="center" merge="true" width="83">备注</th>
+                    </tr>
+                    <tr>
+                        <td id="notes">享受主合同约定的除月返外的所有费用项目。</td>
+                    </tr>
+                </table>
+            </agg_term1_body>
+        </agg_term1>
+
+        <agg_term1>
+            <agg_term1_num>三、</agg_term1_num>
+            <agg_term1_body>
+                特价机产品销售额或进货额计入甲乙双方签订的主合同及对应的补充协议有效期内相应规模。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>四、</agg_term1_num>
+            <agg_term1_body>
+                本协议中商品享受本协议约定的月返政策，同时享受主合同约定的除月返外的所有费用项目。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>五、</agg_term1_num>
+            <agg_term1_body>
+                甲方应保证特价机在入乙方仓库后30天内销售完毕，如乙方在30天（含）内未能销售完毕，剩余的产品乙方有权退回甲方，甲方应在接到乙方通知后3日内无条件完成退货，否则视为甲方违约，甲方应承担滞销处理及仓储费用。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>六、</agg_term1_num>
+            <agg_term1_body>
+                如甲方提供的特价机供货价格、卖场标价及市场实际成交价违背主合同及本协议的约定（包括利用赠品、返券等变相降价行为），乙方有权按照市场最低的实际成交价对相应的零售价格进行调整，因调整导致的毛利差额由甲方补足。同时乙方有权对该批型号商品的全部库存的零售价格进行调整，因此产生的毛利差额均由甲方补齐。对于乙方为调查核实甲方向其他零售商提供的产品的市场实际成交价而从其他零售商购买的商品，甲方同意按照乙方的实际购买价向乙方回购该商品。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>七、</agg_term1_num>
+            <agg_term1_body>
+                如甲方提供的特价机未达到本协议约定的条件（包括但不限于供价虚假、售价虚假、让利比例承担不足等），以特价机形式向乙方提供非特价机的，视为甲方违约，甲方同意以该部分不达标特价机进货额为基数，按主合同及其附件约定正常机商业折扣计算返利金额的1.5倍向乙方支付违约金，因此造成乙方、第三人其他经济损失的，甲方亦应予赔偿。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>八、</agg_term1_num>
+            <agg_term1_body>
+                甲方对乙方现有库存商品中与本协议约定的特价机型产品同型号的产品（如有），必须按照本协议约定的现供价自协议有效期开始之日起给予降价补差，甲方须向乙方出具书面的降价确认函，标明调价的型号、数量、价格，加盖有效印章或有效授权人员签字。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>九、</agg_term1_num>
+            <agg_term1_body>
+                本协议第五条、第六条、第七条、第八条约定的甲方应支付乙方的所有款项，甲方同意乙方有权从最近一次结算的货款中直接扣收，如乙方应付甲方的款项不足以抵扣上述款项的，甲方应在收到乙方支付相关款项通知后10个工作日内以电汇的形式向乙方支付，逾期甲方应以欠付金额为基础按年利率24%的标准向乙方按月支付违约金，支付形式为电汇或账扣。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>十、</agg_term1_num>
+            <agg_term1_body>
+                甲方必须按本特价机协议约定的产品型号在订单下达之日起7天内送货到乙方指定仓库，否则视为甲方违约。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>十一、</agg_term1_num>
+            <agg_term1_body>
+                甲方保证向乙方提供的特价机产品性能价格比有明显优势。
+            </agg_term1_body>
+        </agg_term1>
+
+        <agg_term1>
+            <agg_term1_num>十二、</agg_term1_num>
+            <agg_term1_body>
+                货款支付方式为
+                <input type="text" readonly="true" width="30" id="loan_settle_option"></input>
+                ，帐期为
+                <input type="number" readonly="true" width="30" id="loan_settle_duration"></input>
+                天。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>十三、</agg_term1_num>
+            <agg_term1_body>
+                双方另行约定（另行约定条款与本协议其他条款约定不一致的，以另行约定条款为准）：                                       。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>十四、</agg_term1_num>
+            <agg_term1_body>
+                甲乙双方同意本协议未约定的条款和内容适用主合同及相关补充协议的相关条款和内容。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>十五、</agg_term1_num>
+            <agg_term1_body>
+                甲乙双方应积极履行本协议规定的义务。本协议与主合同及相关补充协议有冲突的部分以本协议为准。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>十六、</agg_term1_num>
+            <agg_term1_body>
+                本协议有效期限：自
+                <date id="agg_date_begin"></date>起，至
+                <date id="agg_date_end"></date>止。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>十七、</agg_term1_num>
+            <agg_term1_body>
+                本协议自甲乙双方盖章（乙方以加盖合同专用章为准）之日起生效。
+            </agg_term1_body>
+        </agg_term1>
+        <agg_term1>
+            <agg_term1_num>十八、</agg_term1_num>
+            <agg_term1_body>
+                本协议一式六份，双方各执三份，具同等法律效力。
+            </agg_term1_body>
+        </agg_term1>
+    </terms>
 
     <!-- sign -->
     <sign id_party_a="party_a_name" id_party_b="party_b_name" id_party_a_rep="party_a_legal_contact"
