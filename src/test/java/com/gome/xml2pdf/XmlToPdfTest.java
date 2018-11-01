@@ -72,9 +72,10 @@ public class XmlToPdfTest {
             //设置页脚
             footer = pdfStamper.getUnderContent(i);
             footer.beginText();
-            footer.setFontAndSize(base, 12);
+            footer.setFontAndSize(base, 9);
             footer.setTextMatrix(200, 200);
-            footer.showTextAligned(Element.CCITT_ENDOFBLOCK,"第   " + i + "  页\t共   " + totalPage + "页",300,20,0);//左边距、下边距
+            //左边距、下边距
+            footer.showTextAligned(Element.CCITT_ENDOFBLOCK, i + "/" + totalPage, 300, 20, 0);
             footer.endText();
 
             //设置水印

@@ -11,9 +11,9 @@
                         /* it is just A4 size */
                         size: 8.5in 11in;
                         /* 设置页脚 */
-                        @bottom-center {
-                            content: counter(page) "/" counter(pages);
-                        }
+                        <!--@bottom-center {-->
+                            <!--content: counter(page) "/" counter(pages);-->
+                        <!--}-->
                     }
                     *{margin:0;padding:0;}
                     body {
@@ -60,11 +60,17 @@
                     }
 
                     tr {
-                        vertical-align: top;
+                    vertical-align: top;
+                    word-break: keep-all;
                     }
 
                     .item_index {
                         width: 50px;
+                    }
+
+                    <!-- table边框 -->
+                    table td{
+                        empty-cells:show;
                     }
                 </style>
             </head>
@@ -157,23 +163,46 @@
                                                         <xsl:value-of select="following-sibling::text()[1]"/>
                                                     </xsl:for-each>
                                                     <!-- table框 -->
-                                                    <table border="1px" cellspacing="0" cellpadding="0">
-                                                        <xsl:for-each select="table/tr">
-                                                            <tr>
-                                                                <xsl:for-each select="th">
-                                                                    <th style="width:8.6%">
-                                                                        <xsl:value-of select="text()"></xsl:value-of>
-                                                                    </th>
-                                                                </xsl:for-each>
-                                                                <xsl:for-each select="td">
-                                                                    <th style="width:8.6%">
-                                                                        <xsl:value-of select="text()"></xsl:value-of>
-                                                                    </th>
-                                                                </xsl:for-each>
-
-                                                            </tr>
-                                                        </xsl:for-each>
-                                                    </table>
+                                                    <xsl:for-each select="table">
+                                                        <table border="1" style="border-collapse:collapse;">
+                                                                <tr>
+                                                                    <xsl:for-each select="tr/th">
+                                                                        <td style="width:8.6%">
+                                                                            <xsl:value-of select="text()"></xsl:value-of>
+                                                                        </td>
+                                                                    </xsl:for-each>
+                                                                </tr>
+                                                                <tr style="height:50px">
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td rowspan="2" style="width:8.6%">
+                                                                        <xsl:value-of select="tr/td/text()"></xsl:value-of>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="height:60px">
+                                                                    <td style="width:8.6%;height:45px"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                    <td style="width:8.6%;"></td>
+                                                                </tr>
+                                                        </table>
+                                                    </xsl:for-each>
                                                 </xsl:for-each>
                                             </div>
                                         </td>

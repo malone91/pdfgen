@@ -75,7 +75,7 @@
                     <!--}-->
 
                     tr {
-                        vertical-align: top;
+                        text-wrap: avoid;
                     }
 
                     .item_index {
@@ -241,8 +241,8 @@
                 </div>
 
                 <!-- 文档结束标识 -->
-                <div style="page-break-after:always; border:1px solid blue;"></div>
-                <div style="page-break-before:always; border:1px solid red;"></div>
+                <div style="page-break-after:always;"></div>
+                <div style="page-break-before:always;"></div>
             </body>
         </html>
     </xsl:template>
