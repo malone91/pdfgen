@@ -12,9 +12,11 @@
                         size: 8.5in 11in;
                         /* 设置页眉 */
                         @top-left {
+                            font-size: 9pt;
                             content: element(left-header);
                         }
                         @top-right {
+                            font-size: 9pt;
                             content: element(right-header);
                         }
                         /* 设置页脚 */
