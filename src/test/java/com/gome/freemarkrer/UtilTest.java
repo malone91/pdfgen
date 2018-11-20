@@ -20,6 +20,6 @@ public class UtilTest {
         FileOutputStream out = new FileOutputStream(new File("E:/freemarker.pdf"));
 
         PDFTemplateUtil pdfUtil = new PDFTemplateUtil();
-        pdfUtil.createPDF(data, out);
+//        pdfUtil.createPDF(data, out);
     }
 }

@@ -51,49 +51,44 @@ public class PDFTemplateUtil {
     private String encoding = "UTF-8";
 
 
-    /**
-     * 生成pdf
-     * @param data  传入到freemarker模板里的数据
-     * @param out   生成的pdf文件流
-     */
-    public void createPDF(Object data, OutputStream out) {
-        // 创建一个FreeMarker实例, 负责管理FreeMarker模板的Configuration实例
-        Configuration cfg = new Configuration(Configuration.DEFAULT_INCOMPATIBLE_IMPROVEMENTS);
-        // 指定FreeMarker模板文件的位置
-        cfg.setClassForTemplateLoading(getClass(), templatePath);
-
-        ITextRenderer renderer = new ITextRenderer();
-        try {
-            // 设置 css中 的字体样式（暂时仅支持宋体和黑体）
-            renderer.getFontResolver().addFont(fontPath + font, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
-
-            // 设置模板的编码格式
-            cfg.setEncoding(Locale.CHINA, encoding);
-            // 获取模板文件 template.ftl
-            Template template = cfg.getTemplate(templateFileName, encoding);
-            StringWriter writer = new StringWriter();
-            // 将数据输出到html中
-            template.process(data, writer);
-            writer.flush();
-
-            String html = writer.toString();
-            // 把html代码传入渲染器中
-            renderer.setDocumentFromString(html);
-
-            // 解决图片的相对路径问题 ##必须在设置document后再设置图片路径，不然不起作用
-            // 如果使用绝对路径依然有问题，可以在路径前面加"file:/"
-            renderer.getSharedContext().setBaseURL(classpath + imagePath);
-            renderer.layout();
-
-            renderer.createPDF(out, false);
-            renderer.finishPDF();
-            out.flush();
-            out.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    public void createPDF(Object data, OutputStream out) {
+//        // 创建一个FreeMarker实例, 负责管理FreeMarker模板的Configuration实例
+//        Configuration cfg = new Configuration(Configuration.DEFAULT_INCOMPATIBLE_IMPROVEMENTS);
+//        // 指定FreeMarker模板文件的位置
+//        cfg.setClassForTemplateLoading(getClass(), templatePath);
+//
+//        ITextRenderer renderer = new ITextRenderer();
+//        try {
+//            // 设置 css中 的字体样式（暂时仅支持宋体和黑体）
+//            renderer.getFontResolver().addFont(fontPath + font, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+//
+//            // 设置模板的编码格式
+//            cfg.setEncoding(Locale.CHINA, encoding);
+//            // 获取模板文件 template.ftl
+//            Template template = cfg.getTemplate(templateFileName, encoding);
+//            StringWriter writer = new StringWriter();
+//            // 将数据输出到html中
+//            template.process(data, writer);
+//            writer.flush();
+//
+//            String html = writer.toString();
+//            // 把html代码传入渲染器中
+//            renderer.setDocumentFromString(html);
+//
+//            // 解决图片的相对路径问题 ##必须在设置document后再设置图片路径，不然不起作用
+//            // 如果使用绝对路径依然有问题，可以在路径前面加"file:/"
+//            renderer.getSharedContext().setBaseURL(classpath + imagePath);
+//            renderer.layout();
+//
+//            renderer.createPDF(out, false);
+//            renderer.finishPDF();
+//            out.flush();
+//            out.close();
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 
     public void setClasspath(String classpath) {

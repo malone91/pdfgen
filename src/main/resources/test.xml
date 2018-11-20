@@ -1,0 +1,90 @@
+<w:wordDocument xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:odi="http://opendope.org/components" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:cdr="http://schemas.openxmlformats.org/drawingml/2006/chartDrawing" xmlns:odc="http://opendope.org/conditions" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:oda="http://opendope.org/answers" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:xvml="urn:schemas-microsoft-com:office:excel" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:b="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" xmlns:comp="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:sl="http://schemas.openxmlformats.org/schemaLibrary/2006/main" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:pvml="urn:schemas-microsoft-com:office:powerpoint" xmlns:we="http://schemas.microsoft.com/office/webextensions/webextension/2010/11" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:odgm="http://opendope.org/SmartArt/DataHierarchy" xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:c14="http://schemas.microsoft.com/office/drawing/2007/8/2/chart" xmlns:odx="http://opendope.org/xpaths" xmlns:cppr="http://schemas.microsoft.com/office/2006/coverPageProps" xmlns:dsp="http://schemas.microsoft.com/office/drawing/2008/diagram">
+<w:body>
+<w:p w:rsidRDefault="00375758" w:rsidR="00375758">
+<w:pPr>
+<w:spacing w:lineRule="auto" w:line="360"/>
+<w:rPr>
+<w:b/>
+<w:bCs/>
+<w:sz w:val="32"/>
+</w:rPr>
+</w:pPr>
+<w:bookmarkStart w:name="_GoBack" w:id="0"/>
+<w:bookmarkEnd w:id="0"/>
+</w:p>
+<w:p w:rsidRDefault="00447571" w:rsidR="00375758">
+<w:pPr>
+<w:spacing w:lineRule="auto" w:line="360"/>
+<w:jc w:val="center"/>
+<w:rPr>
+<w:rFonts w:hAnsi="宋体" w:ascii="宋体"/>
+<w:b/>
+<w:bCs/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="eastAsia"/>
+<w:b/>
+<w:bCs/>
+<w:sz w:val="32"/>
+</w:rPr>
+<w:t>经营采购合同书</w:t>
+</w:r>
+</w:p>
+<w:p w:rsidRDefault="00447571" w:rsidR="00375758">
+<w:pPr>
+<w:pStyle w:val="a8"/>
+<w:spacing w:lineRule="auto" w:line="360"/>
+<w:rPr>
+<w:rFonts w:hAnsi="宋体" w:ascii="宋体"/>
+<w:b/>
+<w:bCs/>
+<w:sz w:val="21"/>
+<w:szCs w:val="21"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="eastAsia" w:hAnsi="宋体" w:ascii="宋体"/>
+<w:b/>
+<w:bCs/>
+<w:sz w:val="21"/>
+<w:szCs w:val="21"/>
+</w:rPr>
+<w:t>原则条款</w:t>
+</w:r>
+</w:p>
+<w:p w:rsidRDefault="00447571" w:rsidR="00375758">
+<w:pPr>
+<w:pStyle w:val="ListParagraph"/>
+<w:numPr>
+<w:ilvl w:val="0"/>
+<w:numId w:val="1"/>
+</w:numPr>
+<w:ind w:left="1080"/>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:rFonts w:hint="eastAsia" w:hAnsi="宋体" w:ascii="宋体"/>
+<w:b/>
+<w:bCs/>
+<w:szCs w:val="21"/>
+</w:rPr>
+<w:t>
+                            本合同书经甲乙双方通过友好协商，本着优势互补、互惠互利、共同发展的原则，依据《中华人民共和国合同法》、《中华人民共和国产品质量法》、《中华人民共和国消费者权益保护法》、《零售商供应商公平交易管理办法》等法律、法规的规定签订。
+                        </w:t>
+</w:r>
+</w:p>
+<w:sectPr w:rsidR="00375758">
+<w:headerReference r:id="rId10" w:type="default"/>
+<w:footerReference r:id="rId11" w:type="even"/>
+<w:footerReference r:id="rId12" w:type="default"/>
+<w:pgSz w:h="16838" w:w="11906"/>
+<w:pgMar w:gutter="0" w:footer="992" w:header="851" w:left="1440" w:bottom="1440" w:right="1106" w:top="1440"/>
+<w:pgNumType w:chapStyle="1"/>
+<w:cols w:space="425"/>
+<w:docGrid w:linePitch="312" w:type="lines"/>
+</w:sectPr>
+</w:body>
+</w:wordDocument>

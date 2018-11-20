@@ -96,7 +96,11 @@
                     <!-- 合同标题 -->
                     <h1 style="text-align:center; font-size: 16pt;"><xsl:value-of select="document/title"></xsl:value-of></h1>
                     <br></br>
-                    <h4 style="text-align:right;"><xsl:value-of select="document/contract_id"></xsl:value-of><span style="border-bottom:1px solid #000;padding:0 50px;">$!{<xsl:value-of select="document/contract_id/@id"></xsl:value-of>}</span></h4>
+                    <h4 style="text-align:right;"><xsl:value-of select="document/contract_id"></xsl:value-of>
+                        <span style="border-bottom:1px solid #000;padding:0 50px;">
+                            $!{<xsl:value-of select="document/contract_id/@id"></xsl:value-of>}<input></input>
+                        </span>
+                    </h4>
                     <br></br>
                     <div>
                         <xsl:for-each select="document/parties/party">
